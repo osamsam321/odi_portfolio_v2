@@ -1,12 +1,12 @@
 
-<Main>
+<Main #main_page (click) = "magePageClicked($event)">
 
     <section class="about-me">
       <div class="container">
         <div class="row">
          
           <div class="col-md-6">
-            <h1 class="section-title">About Me</h1>
+            <h1 fxLayoutAlign = 'center' class="title" >About Me</h1>
             <p class="section-description">Hi, I'm John Doe, a passionate web developer with 5 years of experience in creating modern and responsive websites. I specialize in front-end development using Angular, HTML, CSS, and JavaScript.</p>
             <p class="section-description">I have a keen eye for detail and enjoy creating visually appealing and user-friendly websites. I am always eager to learn new technologies and techniques to enhance my skills and stay up-to-date with the latest web development trends.</p>
             <p class="section-description">In my free time, I enjoy working on personal projects, contributing to open-source projects, and keeping myself updated with the latest advancements in the web development community.</p>
@@ -19,24 +19,168 @@
   <section> 
     <div id="skill_section_cont" fxLayoutAlign="space-around" fxLayout="row wrap">
 
-          <h1 fxLayoutAlign = 'center' id="skills_title"> Skills</h1>
-      
-        <div id="skill_box_cont" *ngFor="let skills_box of skills_boxes" fxLayoutAlign="center" > 
-            <h1 id="title"> {{skills_box.title}}</h1>
-            <div class="img_wrap"> {{skills_box.img_url}}</div>
-            <p id="description"> {{skills_box.description}}</p>
+          <h1 fxLayoutAlign = 'center' class="title"> Skills</h1>
+
+
+        <div  id="java_skills_box_cont" #skills_box_cont class="skill_box_cont"  
+        fxLayoutAlign="center" (click) ="skillsBoxClicked($event)" > 
+            <h1 class="skills_box_title"> Java</h1>
+            <div class="img_wrap"> </div>
+            <p id="description"> </p>
 
         </div>
 
+        <div id="linux_skills_box_cont" #skills_box_cont class="skill_box_cont"  
+        fxLayoutAlign="center" (click) ="skillsBoxClicked($event)" > 
+            <h1 class="skills_box_title" > Linux</h1>
+            <div class="img_wrap"> </div>
+            <p id="description"> </p>
+
+        </div>
+
+        <div id="python_skills_box_cont" #skills_box_cont class="skill_box_cont"  
+        fxLayoutAlign="center" (click) ="skillsBoxClicked($event)" > 
+            <h1 class="skills_box_title"> Python</h1>
+            <div class="img_wrap"> </div>
+            <p id="description"> </p>
+
+        </div>
+
+        <div id="aws_skills_box_cont" #skills_box_cont class="skill_box_cont"  
+        fxLayoutAlign="center" (click) ="skillsBoxClicked($event)" > 
+            <h1 class="skills_box_title"> AWS</h1>
+            <div class="img_wrap"> </div>
+            <p id="description"> </p>
+
+        </div>
+
+        <div id="microsoft_skills_box_cont" #skills_box_cont class="skill_box_cont"  
+        fxLayoutAlign="center" (click) ="skillsBoxClicked($event)" > 
+            <h1 class="skills_box_title"> Microsoft </h1>
+            <div class="img_wrap"> </div>
+            <p id="description"> </p>
+
+        </div>
+
+        <div id="frontend_skills_box_cont" #skills_box_cont class="skill_box_cont"  
+        fxLayoutAlign="center" (click) ="skillsBoxClicked($event)" > 
+            <h1 class="skills_box_title"> FrontEnd</h1>
+            <div class="img_wrap"> </div>
+            <p id="description"> </p>
+
+        </div>
+
+        <div id="other_skills_box_cont" #skills_box_cont class="skill_box_cont"  
+        fxLayoutAlign="center" (click) ="skillsBoxClicked($event)" > 
+            <h1 class="skills_box_title"> Other</h1>
+            <div class="img_wrap"> </div>
+            <p id="description"> </p>
+
+        </div>
+        
+
     </div>
 
-
-
-    
-
-
   </section>
-  
+
+
+  <div  fxLayoutAlign="space-around" fxLayout="row wrap">
+
+      <div class="modal" *ngIf ="modal_is_open" #modal >
+
+       <container-element [ngSwitch] = "model_to_open_title">
+
+          <div *ngSwitchCase="'java_skills_box_cont'">
+              <div class="modal-content" #modalContent>
+                <span class="modal-close" ></span>
+                <h2 class="model_skill_title">Java</h2>
+                <p class="model_skill_description">
+                  I have a strong proficiency in Java programming language, with several years of experience developing robust and scalable applications. I am well-versed in object-oriented principles, design patterns, and best practices. My expertise lies in developing backend systems, enterprise applications, and web services using Java frameworks like Spring and Hibernate. I am also knowledgeable in Java-based technologies such as JavaFX and Java EE. With my deep understanding of the Java ecosystem, I am able to deliver efficient and maintainable code solutions.
+
+
+                </p>
+             </div>
+        
+          </div>
+         
+          <div *ngSwitchCase="'linux_skills_box_cont'">
+              <div class="modal-content" #modalContent>
+                <span class="modal-close" ></span>
+                <h2 class="model_skill_title">Linux</h2>
+                <p class="model_skill_description">
+                  I possess a strong familiarity with Linux operating systems and command-line environments. I am comfortable working with various Linux distributions and have experience managing servers, configuring networks, and administering Linux-based systems. I am proficient in shell scripting, allowing me to automate tasks and streamline workflows. Additionally, I have knowledge of Linux server technologies such as Apache, Nginx, and MySQL, enabling me to deploy and maintain web applications effectively. With my expertise in Linux, I am able to troubleshoot issues, optimize performance, and ensure the smooth operation of Linux-based infrastructures.
+
+                </p>
+             </div>
+          </div>
+
+          <div *ngSwitchCase="'python_skills_box_cont'">
+              <div class="modal-content" #modalContent>
+                <span class="modal-close" ></span>
+                <h2 class="model_skill_title">Python</h2>
+                <p class="model_skill_description">
+                  I possess a comprehensive understanding of Python programming language and its wide range of applications. I have leveraged Python's simplicity and versatility to develop various types of projects, including web applications, data analysis scripts, and automation tools. My experience with Python frameworks like Django and Flask enables me to build robust and scalable web applications efficiently. Additionally, I have utilized Python libraries such as NumPy, Pandas, and Matplotlib for data manipulation, analysis, and visualization. With my Python skills, I am able to deliver reliable and efficient solutions across different domains.
+
+                </p>
+              </div>
+          </div>
+
+          <div *ngSwitchCase="'aws_skills_box_cont'">
+               
+            <div class="modal-content" #modalContent>
+              <span class="modal-close" ></span>
+              <h2 class="model_skill_title">AWS</h2>
+              <p class="model_skill_description">
+                    
+                I have a solid understanding of cloud computing concepts and extensive experience working with Amazon Web Services (AWS). I have successfully deployed and managed applications on various AWS services, including EC2, S3, Lambda, RDS, and more. I am proficient in designing and implementing scalable and highly available architectures on AWS, leveraging services like Auto Scaling, Elastic Load Balancing, and VPC. My expertise extends to cloud security, monitoring, and cost optimization techniques, ensuring efficient and secure cloud deployments.
+              </p>
+            </div>
+          
+          </div>
+
+          <div *ngSwitchCase="'microsoft_skills_box_cont'">
+
+
+              <div class="modal-content" #modalContent>
+                <span class="modal-close" ></span>
+                <h2 class="model_skill_title">Microsoft</h2>
+                <p class="model_skill_description">
+
+                  I have a proficient understanding of Microsoft technologies and frameworks, including .NET and ASP.NET. I have worked on developing and maintaining enterprise applications using Microsoft's stack, leveraging tools like Visual Studio and SQL Server. I am skilled in creating desktop applications, web applications, and APIs using C# and ASP.NET MVC. My knowledge extends to working with Microsoft Azure for cloud-based deployments, including Azure App Service, Azure SQL Database, and Azure Functions. With my expertise in Microsoft technologies, I am able to deliver reliable and scalable solutions on this platform.
+                </p>
+              </div>
+          </div>
+      
+
+          <div *ngSwitchCase="'frontend_skills_box_cont'">
+            <div class="modal-content" #modalContent>
+              <span class="modal-close" ></span>
+              <h2 class="model_skill_title">Front End</h2>
+              <p class="model_skill_description">yes them</p>
+            </div>
+
+          </div>
+
+          <div *ngSwitchDefault>
+
+
+          </div>
+
+          
+       </container-element>
+
+       <div fxLayoutAlign = "center" style="width: 100%;"> 
+          <button id="close_modal_btn" (click) = "closeModal()"> Close</button>
+
+       </div>
+      </div>
+      
+ </div>  
+
+ 
+
+
+
 
 </Main>
 
