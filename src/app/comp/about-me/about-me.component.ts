@@ -18,10 +18,9 @@ import {
         opacity: 1,
       })),
       state('closed', style({
-        height: '90vh',
+        height: '95vh',
         display: 'none',
-        opacity: .3,
-        backgroundColor: 'rgba(70,100,100,.5)'
+        backgroundColor: 'rgba(150,130,50,.12)'
       })),
       transition('open => closed', [
         animate('0.25s')

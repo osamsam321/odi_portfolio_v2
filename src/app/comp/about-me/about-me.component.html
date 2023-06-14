@@ -1,7 +1,7 @@
 
 <Main #main_page (click) = "magePageClicked($event)">
 
-    <section [@openClose] = "current_page_val == 0? 'open': 'closed'" id = "about_me_section" class="about-me" #about_me_section>
+    <section [@openClose] = "current_page_val == 0? 'open': 'closed'" id = "about_me_section"  #about_me_section>
       <div class="container">
         <div class="row">
          
@@ -22,59 +22,77 @@
           <h1 fxLayoutAlign = 'center' class="title"> Skills</h1>
 
 
-        <div  id="java_skills_box_cont" #skills_box_cont class="skill_box_cont"  
-        fxLayoutAlign="center" (click) ="skillsBoxClicked($event)" > 
+        <div  id="java_skills_box_cont" #skills_box_cont class="skill_box_cont" 
+          (click) ="skillsBoxClicked($event)" > 
+          <div class="skills_cont_img_wrap"> 
+            <img class="skills_cont_img" src = '../../../assets/img/about-me/icons8-java-50.png'>
+          </div>
             <h1 class="skills_box_title"> Java</h1>
-            <div class="img_wrap"> </div>
-            <p id="description"> </p>
+            <div class="hidden_inside_skills_cont"> </div>
 
         </div>
 
         <div id="linux_skills_box_cont" #skills_box_cont class="skill_box_cont"  
-        fxLayoutAlign="center" (click) ="skillsBoxClicked($event)" > 
+         (click) ="skillsBoxClicked($event)" > 
+        <div class="skills_cont_img_wrap"> 
+          <img class="skills_cont_img" src = '../../../assets/img/about-me/icons8-linux-48.png'>
+        </div>
             <h1 class="skills_box_title" > Linux</h1>
-            <div class="img_wrap"> </div>
-            <p id="description"> </p>
+            <div class="hidden_inside_skills_cont"> </div>
+
 
         </div>
 
         <div id="python_skills_box_cont" #skills_box_cont class="skill_box_cont"  
-        fxLayoutAlign="center" (click) ="skillsBoxClicked($event)" > 
+          (click) ="skillsBoxClicked($event)" > 
+         <div class="skills_cont_img_wrap"> 
+          <img class="skills_cont_img" src = '../../../assets/img/about-me/icons8-python-48.png'>
+        </div>
             <h1 class="skills_box_title"> Python</h1>
-            <div class="img_wrap"> </div>
-            <p id="description"> </p>
+            <div class="hidden_inside_skills_cont"> </div>
+
 
         </div>
 
         <div id="aws_skills_box_cont" #skills_box_cont class="skill_box_cont"  
-        fxLayoutAlign="center" (click) ="skillsBoxClicked($event)" > 
+         (click) ="skillsBoxClicked($event)" > 
+        <div class="skills_cont_img_wrap"> 
+          <img class="skills_cont_img" src = '../../../assets/img/about-me/icons8-amazon-web-services-48.png'>
+        </div>
             <h1 class="skills_box_title"> AWS</h1>
-            <div class="img_wrap"> </div>
-            <p id="description"> </p>
+            <div class="hidden_inside_skills_cont"> </div>
+
 
         </div>
 
         <div id="microsoft_skills_box_cont" #skills_box_cont class="skill_box_cont"  
-        fxLayoutAlign="center" (click) ="skillsBoxClicked($event)" > 
-            <h1 class="skills_box_title"> Microsoft </h1>
-            <div class="img_wrap"> </div>
-            <p id="description"> </p>
+       (click) ="skillsBoxClicked($event)" > 
+        <div class="skills_cont_img_wrap"> 
+          <img class="skills_cont_img" src = '../../../assets/img/about-me/icons8-microsoft-48.png'>
+        </div>
+            <div> <h1 class="skills_box_title"> Microsoft </h1> </div>
+            <div class="hidden_inside_skills_cont"> </div>
+
 
         </div>
 
         <div id="frontend_skills_box_cont" #skills_box_cont class="skill_box_cont"  
-        fxLayoutAlign="center" (click) ="skillsBoxClicked($event)" > 
+         (click) ="skillsBoxClicked($event)" > 
+        <div class="skills_cont_img_wrap"> 
+          <img class="skills_cont_img" src = '../../../assets/img/about-me/icons8-front-end-64.png'>
+        </div>
             <h1 class="skills_box_title"> FrontEnd</h1>
-            <div class="img_wrap"> </div>
-            <p id="description"> </p>
+            <div class="hidden_inside_skills_cont"> </div>
 
         </div>
 
         <div id="other_skills_box_cont" #skills_box_cont class="skill_box_cont"  
-        fxLayoutAlign="center" (click) ="skillsBoxClicked($event)" > 
+         (click) ="skillsBoxClicked($event)" > 
+        <div class="skills_cont_img_wrap"> 
+          <img class="skills_cont_img" src = '../../../assets/img/about-me/icons8-categorize-50.png'>
+        </div>
             <h1 class="skills_box_title"> Other</h1>
-            <div class="img_wrap"> </div>
-            <p id="description"> </p>
+            <div class="hidden_inside_skills_cont"> </div>
 
         </div>
         

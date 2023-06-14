@@ -10,6 +10,10 @@ main{
   overflow-y: hidden; 
 }
 
+section{
+  margin-top: 5%;
+}
+
 .about-me {
     padding: 80px 0;
   }
@@ -34,7 +38,7 @@ main{
   .section-description {
     font-size: 18px;
     margin-bottom: 15px;
-    margin-top: 30px;
+    margin-top: 0px;
     line-height: 50px;
   }
   h1,p{
@@ -43,6 +47,7 @@ main{
 
   .title
   {
+    
     margin-bottom: 5%;
     width: 100%;
   }
@@ -56,15 +61,20 @@ main{
   {
     height: 25%;
     min-width: 34%;
-    margin-top: 2%;
+    margin-top: 4%;
     background-color: rgba(30,30,30,.9);
     cursor: pointer;
+    display: flex;
     border: 2px solid #2980b9; /* Border color */
     border-radius: 10px; /* Border radius for rounded corners */
     box-shadow: 0 0 10px rgba(255, 52, 52, 0.5); /* Box shadow */
+    justify-content: space-between; 
+    align-items: center;   
     color: #333; /* Text color */
     
   }
+
+
 
   .skill_box_cont:hover
 {
@@ -183,4 +193,25 @@ main{
 {
  background-color: red;
   
+}
+.skills_cont_img_wrap
+{
+  width: 35%;
+  height: 100%;
+  display: flex;
+  justify-content: right;
+
+}
+.skills_cont_img
+{
+  width: 40px;
+  height: 40px;
+}
+
+.hidden_inside_skills_cont
+{
+  display: block;
+  width: 35%;
+  height: 100%;
+
 }
