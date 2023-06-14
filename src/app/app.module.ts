@@ -12,6 +12,7 @@ import { ProjectsComponent } from './comp/page_type/projects/projects.component'
 import { RouterModule, Routes } from '@angular/router';
 import { AboutMeComponent } from './comp/about-me/about-me.component';
 import { MiscComponent } from './comp/misc/misc.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 // const routes: Routes = [
@@ -44,6 +45,7 @@ const routes: Routes = [
     BrowserModule,
     AppRoutingModule,
     FlexLayoutModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot(routes) 
   ],
   

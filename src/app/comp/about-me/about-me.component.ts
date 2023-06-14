@@ -1,31 +1,77 @@
-import { Component, ElementRef, HostListener, OnInit, Renderer2, ViewChild } from '@angular/core';
-
+import { AfterViewInit, Component, ElementRef, HostListener, OnInit, Renderer2, ViewChild } from '@angular/core';
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition,
+  //....
+} from '@angular/animations';
 @Component({
   selector: 'app-about-me',
   templateUrl: './about-me.component.html',
-  styleUrls: ['./about-me.component.css']
+  styleUrls: ['./about-me.component.css'],
+  animations: [
+    trigger('openClose', [
+      // ...
+      state('open', style({
+        opacity: 1,
+      })),
+      state('closed', style({
+        height: '90vh',
+        display: 'none',
+        opacity: .3,
+        backgroundColor: 'rgba(70,100,100,.5)'
+      })),
+      transition('open => closed', [
+        animate('0.25s')
+      ]),
+      transition('closed => open', [
+        animate('0.25s')
+      ]),
+    ]),
+  ],
 })
-export class AboutMeComponent implements OnInit {
+export class AboutMeComponent implements AfterViewInit {
 
 
   modal_is_open = false;
   new_modal_opened = false;
   model_to_open_title?: string;
+  current_page_val = 0;
+  //add another page here if needed to modify
   @ViewChild('modal', { static: false }) model_ref?: ElementRef ;
   @ViewChild('main_page', { static: false }) main_page_ref?: ElementRef ;
   @ViewChild('skills_box_cont', { static: false }) skills_box_cont_ref?: ElementRef ;
+  @ViewChild('skills_container_section') skills_box_section_ref!: ElementRef ;
+  @ViewChild('about_me_section') about_me_section_ref!: ElementRef ;
+  page_element_ref_list: ElementRef<any>[] = [];
+
+
 
   skills_boxes: skillsBox[] = [];
-  ngOnInit(): void {
-
+ 
+  constructor(private model: ElementRef, private r2: Renderer2, 
+    skills_box_section_ref: ElementRef,  about_me_section_ref: ElementRef){}
+  ngAfterViewInit(): void {
+      this.page_element_ref_list = [this.skills_box_section_ref, this.about_me_section_ref];
+    
+    console.log("element ref_list size: " + this.page_element_ref_list.length);
   }
-  constructor(private model: ElementRef, private r2: Renderer2){}
 
+  //increment page index
+  changeToNextPage() {
+    this.current_page_val = (this.current_page_val + 1) % this.page_element_ref_list.length;
+    console.log("current page value: " + this.current_page_val);
+    console.log("page element list size: " + this.page_element_ref_list.length);
+    // this.showNewPage(this.current_page_val);
+  }
+
+  
    openModal() {
     if(!this.modal_is_open){
-      // this.r2.setStyle()
+
       console.log("show model");
-      // this.r2.setStyle(this.model_ref, "display", "block");
 
       this.modal_is_open = true;
     }
@@ -103,3 +149,5 @@ export class AboutMeComponent implements OnInit {
    years_experience!: number;
  
 }
+
+

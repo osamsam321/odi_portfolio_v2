@@ -1,7 +1,7 @@
 
 <Main #main_page (click) = "magePageClicked($event)">
 
-    <section class="about-me">
+    <section [@openClose] = "current_page_val == 0? 'open': 'closed'" id = "about_me_section" class="about-me" #about_me_section>
       <div class="container">
         <div class="row">
          
@@ -16,7 +16,7 @@
       </div>
     </section>
 
-  <section> 
+  <section [@openClose] = "current_page_val == 1? 'open': 'closed'" id="skill_container_section" #skills_container_section> 
     <div id="skill_section_cont" fxLayoutAlign="space-around" fxLayout="row wrap">
 
           <h1 fxLayoutAlign = 'center' class="title"> Skills</h1>
@@ -83,7 +83,7 @@
 
   </section>
 
-
+<section id="skills_modal_section"> 
   <div  fxLayoutAlign="space-around" fxLayout="row wrap">
 
       <div class="modal" *ngIf ="modal_is_open" #modal >
@@ -178,9 +178,9 @@
  </div>  
 
  
+</section>
 
-
-
+<img id="move_down_arrow" (click)="changeToNextPage()"  src="../../../assets/img/about-me/icons8-arrow-100 (1).png"> 
 
 </Main>
 

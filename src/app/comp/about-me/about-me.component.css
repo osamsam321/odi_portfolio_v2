@@ -1,12 +1,13 @@
 main{
 
   width: 100%;
-  height: 200%;
+  height: 100%;
   background-color: black;
   background-image: url('../../../assets/img/home_img/blue-mountain-vugxyc127quhpdj_walpaper.jpg');
   background-size: cover;
-  background-repeat: no-repeat;
-  background-color: rgba(0, 0, 0, 0.2); 
+  background-repeat: no-repeat ;
+  background-color: rgba(0, 0, 0, 0.2);
+  overflow-y: hidden; 
 }
 
 .about-me {
@@ -167,4 +168,19 @@ main{
 }
 .open-modal-button:hover {
   background-color: #45a049;
+}
+#move_down_arrow
+{
+  height: 100px;
+  width: 100px;
+  cursor: pointer;
+  position: absolute;
+  top: 80%;
+  left: 90%;
+  border-radius: 20px;
+}
+#move_down_arrow:hover
+{
+ background-color: red;
+  
 }
