@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, HostListener, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, Directive, ElementRef, HostListener, OnInit, Renderer2, ViewChild } from '@angular/core';
 import {
   trigger,
   state,
@@ -8,6 +8,7 @@ import {
   //....
 } from '@angular/animations';
 @Component({
+ 
   selector: 'app-about-me',
   templateUrl: './about-me.component.html',
   styleUrls: ['./about-me.component.css'],
@@ -31,6 +32,8 @@ import {
     ]),
   ],
 })
+
+
 export class AboutMeComponent implements AfterViewInit {
 
 
@@ -44,6 +47,9 @@ export class AboutMeComponent implements AfterViewInit {
   @ViewChild('skills_box_cont', { static: false }) skills_box_cont_ref?: ElementRef ;
   @ViewChild('skills_container_section') skills_box_section_ref!: ElementRef ;
   @ViewChild('about_me_section') about_me_section_ref!: ElementRef ;
+  @ViewChild('dunbar_work_experience_section') dunbar_work_experience_section_ref!: ElementRef ;
+
+  
   page_element_ref_list: ElementRef<any>[] = [];
 
 
@@ -51,15 +57,26 @@ export class AboutMeComponent implements AfterViewInit {
   skills_boxes: skillsBox[] = [];
  
   constructor(private model: ElementRef, private r2: Renderer2, 
-    skills_box_section_ref: ElementRef,  about_me_section_ref: ElementRef){}
+    skills_box_section_ref: ElementRef,  about_me_section_ref: ElementRef,
+    dunbar_work_experience_section_ref: ElementRef){}
   ngAfterViewInit(): void {
-      this.page_element_ref_list = [this.skills_box_section_ref, this.about_me_section_ref];
+      this.page_element_ref_list = [this.skills_box_section_ref, this.about_me_section_ref, 
+        this.dunbar_work_experience_section_ref];
     
     console.log("element ref_list size: " + this.page_element_ref_list.length);
   }
+  // deincrement page index 
+  changeToNextPageUp() {
 
+ 
+    this.current_page_val = (this.current_page_val <= 0)?
+    this.page_element_ref_list.length - 1: this.current_page_val - 1;
+
+    console.log("current page value: " + this.current_page_val);
+    console.log("page element list size: " + this.page_element_ref_list.length);
+  }
   //increment page index
-  changeToNextPage() {
+  changeToNextPageDown() {
     this.current_page_val = (this.current_page_val + 1) % this.page_element_ref_list.length;
     console.log("current page value: " + this.current_page_val);
     console.log("page element list size: " + this.page_element_ref_list.length);
@@ -93,6 +110,7 @@ export class AboutMeComponent implements AfterViewInit {
     this.closeModal();
     this.openModal();    
   }
+  
   magePageClicked(event: Event)
   {
     const model_clicked = this.model_ref?.nativeElement.contains(event.target);
@@ -111,15 +129,27 @@ export class AboutMeComponent implements AfterViewInit {
     }
   }
 
-  @HostListener('document:keydown.ArrowDown')
-  scrollDown() {
-    window.scrollBy(0, 600);
+   @HostListener('document:keydown', ['$event'])
+  handleKeyDownPress(event: KeyboardEvent) {
+    if (true) {
+      // Only handle the keystroke if the event target is the body element
+      if (event.key === 'ArrowDown') {
+        this.changeToNextPageDown();
+      }
+    }
   }
 
-  @HostListener('document:keydown.ArrowUp')
-  scrollUp() {
-    window.scrollBy(0, -600);
+  @HostListener('document:keyup', ['$event'])
+  handleKeyUpPress(event: KeyboardEvent) {
+    if (true) {
+      // Only handle the keystroke if the event target is the body element
+      if (event.key === 'ArrowUp') {
+        this.changeToNextPageUp();
+      }
+    }
   }
+ 
+}
 
   // main_page_click(event: Event) {
   //   const model_clicked = this.model_ref?.nativeElement.contains(event.target);
@@ -138,7 +168,7 @@ export class AboutMeComponent implements AfterViewInit {
   // }
 
  
-}
+
 
  class skillsBox
 {

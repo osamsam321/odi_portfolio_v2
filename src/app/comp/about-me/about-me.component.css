@@ -1,3 +1,20 @@
+.title-container {
+  text-align: center;
+  margin-top: 5%;
+  width: 100%;
+  padding: 10px;
+}
+
+.title {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 40px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
 main{
 
   width: 100%;
@@ -11,7 +28,7 @@ main{
 }
 
 section{
-  margin-top: 5%;
+  margin-top: 0%;
 }
 
 .about-me {
@@ -54,7 +71,7 @@ section{
   .skills_box_title
   {
     font-size: 24px;
-    pointer-events:none;
+    pointer-events: none;
   }
 
   .skill_box_cont
@@ -89,16 +106,23 @@ section{
   }
 .model_skill_description
 {
-  color: rgb(172, 195, 237);
-  margin:5% auto 0px auto;
-  font-size: 25px;
+  color: rgb(255, 255, 255);
+  background-color: #2d2d2d;
+  border-radius: 10px;
+  padding: 20px;
+  margin:5% 8% 0% 8%;
+  font-size: 24px;
   text-indent: 5%;
+  line-height: 1.8;
+  font-weight: lighter;
+  font-family: 'Cambria';
 }
-.model_skill_title
+.modal_skill_title
 {
   color: rgb(192, 195, 243);
   font-size: 30px;
   margin: 0px auto 0px auto;
+  pointer-events: none;
 }
 /* model style */
 
@@ -110,27 +134,29 @@ section{
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-
+  border-top: 2px solid yellowgreen;
   width: 1000px;
   height: 700px;
   overflow: auto;
-  background-color: rgba(15, 15, 15, 0.98);
+  background-color: rgba(32, 32, 32, 0.98);
   transition: opacity 0.3s, visibility 0s linear 2s;
   border-radius: 10px; /* Border radius for rounded corners */
   box-shadow: 0 0 10px rgba(255, 52, 52, 0.5); /* Box shadow */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 
 }
 
 .modal-content {
   background-color: transparent;
-  margin: 5% auto 0px auto;
-  padding: 20px;
-  width: 60%;
+  /* padding: 20px; */
+  width: 100%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
-  
 }
 
 .modal-close {
@@ -164,11 +190,14 @@ section{
 }
 #close_modal_btn
 {
-  margin-top: 8%;
-  padding: 20px 100px 20px 100px;
+  margin-top: 5%;
+  padding: 15px 70px 15px 70px;
   font-size: 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #29b9a3;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #4fb2c1;
+  box-shadow: 0 0 10px rgba(140, 212, 69, 0.5); /* Box shadow */
+  color: rgb(18, 18, 18);
+  font-weight: 600;
   border-radius: 10px;
   cursor: pointer;
 }
@@ -200,12 +229,16 @@ section{
   height: 100%;
   display: flex;
   justify-content: right;
+  pointer-events: none;
+
 
 }
 .skills_cont_img
 {
   width: 40px;
   height: 40px;
+  pointer-events: none;
+
 }
 
 .hidden_inside_skills_cont
@@ -214,4 +247,29 @@ section{
   width: 35%;
   height: 100%;
 
+}
+.modal_title_cont
+{
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal_title_img_cont, .modal_title_img
+{
+  height: 40px;
+  width: 40px;
+  margin-right: 2%;
+}
+
+.hidden_title_modal_cont
+{
+  height: 40px;
+  width: 40px;
+}
+.modal_title
+{
+  color: white;
+  font-size: 30px;
 }
