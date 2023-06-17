@@ -34,26 +34,7 @@ export class AppComponent implements AfterViewChecked {
     }
   }
 
-  @HostListener('document:keydown', ['$event'])
-  onKeyDown(event: KeyboardEvent) {
-    
-    if (event.key === 'ArrowRight') {
-      console.log('Right arrow key now pressed');
-      // Handle right arrow key event
-      this.linkIndex = (this.linkIndex + 1) % this.links.length; // Increment linkindex by 1
-    } else if (event.key === 'ArrowLeft') {
-      console.log('Left arrow key now pressed');
-      // Handle left arrow key event
-      
-        this.linkIndex = (this.linkIndex <= 0)? this.links.length - 1: this.linkIndex - 1
   
-    }
-    console.log('link index value {}', this.linkIndex);
-
-    this.router.navigate([this.links[this.linkIndex]]);
-    this.updateNav();
-
-  }
   updateNavByUrl(url: String)
   {
     

@@ -94,10 +94,12 @@ export class AboutMeComponent implements AfterViewInit {
   }
 
   closeModal() {
-    console.log("close model");
+    console.log("inside of close model");
   // this.r2.setStyle(this.model_ref, "display", "hidden");
-
-    this.modal_is_open = false;
+    if(this.modal_is_open)
+    {
+      this.modal_is_open = false;
+    }
   }
 
  
@@ -133,21 +135,21 @@ export class AboutMeComponent implements AfterViewInit {
   handleKeyDownPress(event: KeyboardEvent) {
     if (true) {
       // Only handle the keystroke if the event target is the body element
-      if (event.key === 'ArrowDown') {
+      if (event.key === 'ArrowDown' || event.key === 'PageDown') {
         this.changeToNextPageDown();
+      }
+      else if (event.key === 'ArrowUp' || event.key === 'PageUp') {
+        this.changeToNextPageUp();
+      }
+
+      else if(event.key == 'Enter' && this.modal_is_open)
+      {
+        this.closeModal();
       }
     }
   }
 
-  @HostListener('document:keyup', ['$event'])
-  handleKeyUpPress(event: KeyboardEvent) {
-    if (true) {
-      // Only handle the keystroke if the event target is the body element
-      if (event.key === 'ArrowUp') {
-        this.changeToNextPageUp();
-      }
-    }
-  }
+
  
 }
 
