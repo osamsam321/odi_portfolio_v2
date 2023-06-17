@@ -1,8 +1,9 @@
 
 <Main #main_page (click) = "magePageClicked($event)">
 
-    <section [@openClose] = "current_page_val == 0? 'open': 'closed'" id = "about_me_section"  #about_me_section>
-      <div class="container">
+    <section [@openClose] = "current_page_val == 0? 'open': 'closed'" id = "about_me_section"  
+    #about_me_section (@openClose.done)="onAnimationDone($event)" >
+      <div class="container" >
         <div class="row">
          
           <div class="col-md-6">
@@ -20,7 +21,8 @@
       </div>
     </section>
 
-  <section [@openClose] = "current_page_val == 1? 'open': 'closed'" id="skill_container_section" #skills_container_section> 
+  <section [@openClose] = "current_page_val == 1? 'open': 'closed'" (@openClose.done)="onAnimationDone($event)" 
+        id="skill_container_section" #skills_container_section> 
     <div id="skill_section_cont" fxLayoutAlign="space-around" fxLayout="row wrap">
 
           <!-- <h1 fxLayoutAlign = 'center' class="title"> Skills</h1> -->
@@ -92,7 +94,7 @@
 
         </div>
 
-        <div id="other_skills_box_cont" #skills_box_cont class="skill_box_cont"  
+        <!-- <div id="other_skills_box_cont" #skills_box_cont class="skill_box_cont"  
          (click) ="skillsBoxClicked($event)" > 
         <div class="skills_cont_img_wrap"> 
           <img class="skills_cont_img" src = '../../../assets/img/about-me/icons8-categorize-50.png'>
@@ -100,7 +102,7 @@
             <h1 class="skills_box_title"> Other</h1>
             <div class="hidden_inside_skills_cont"> </div>
 
-        </div>
+        </div> -->
         
 
     </div>
@@ -223,8 +225,9 @@
  
 </section>
 
-<section [@openClose] = "current_page_val == 2? 'open': 'closed'" id = "dunbar_work_experience_section"  #dunbar_work_experience_section>
-  <div class="container">
+<section [@openClose] = "current_page_val == 2? 'open': 'closed'" id = "dunbar_work_experience_section"  
+    #dunbar_work_experience_section (@openClose.done)="onAnimationDone($event)">
+  <div class="container"  >
     <div class="row">
       <div class="title-container">
         <h1 class="title"> Work Experience</h1>

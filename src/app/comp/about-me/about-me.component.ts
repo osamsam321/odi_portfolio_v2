@@ -5,6 +5,7 @@ import {
   style,
   animate,
   transition,
+AnimationEvent,
   //....
 } from '@angular/animations';
 @Component({
@@ -24,10 +25,10 @@ import {
         backgroundColor: 'rgba(150,130,50,.12)'
       })),
       transition('open => closed', [
-        animate('0.15s')
+        animate('.15s')
       ]),
       transition('closed => open', [
-        animate('0.15s')
+        animate('.15s')
       ]),
     ]),
   ],
@@ -37,6 +38,7 @@ import {
 export class AboutMeComponent implements AfterViewInit {
 
 
+  section_screen_animation_done = true;
   modal_is_open = false;
   new_modal_opened = false;
   model_to_open_title?: string;
@@ -77,14 +79,24 @@ export class AboutMeComponent implements AfterViewInit {
  
     this.current_page_val = (this.current_page_val <= 0)?
     this.page_element_ref_list.length - 1: this.current_page_val - 1;
-    this.updateDotValue(this.current_page_val);
+    if(this.section_screen_animation_done)
+    {
+      this.updateDotValue(this.current_page_val);
+      this.section_screen_animation_done = false;
+
+    }
     console.log("current page value: " + this.current_page_val);
     console.log("page element list size: " + this.page_element_ref_list.length);
   }
   //increment page index
   changeToNextPageDown() {
     this.current_page_val = (this.current_page_val + 1) % this.page_element_ref_list.length;
-    this.updateDotValue(this.current_page_val);
+    if(this.section_screen_animation_done)
+    {
+      this.updateDotValue(this.current_page_val);
+      this.section_screen_animation_done = false;
+
+    }
     console.log("current page value: " + this.current_page_val);
     console.log("page element list size: " + this.page_element_ref_list.length);
     // this.showNewPage(this.current_page_val);
@@ -92,6 +104,7 @@ export class AboutMeComponent implements AfterViewInit {
 
   updateCurrentPageVal(page_val:number)
   {
+    
     this.current_page_val = page_val;
     this.updateDotValue(this.current_page_val);
   }
@@ -114,6 +127,7 @@ export class AboutMeComponent implements AfterViewInit {
       console.log("show model");
 
       this.modal_is_open = true;
+
     }
   }
 
@@ -157,20 +171,32 @@ export class AboutMeComponent implements AfterViewInit {
 
    @HostListener('document:keydown', ['$event'])
   handleKeyDownPress(event: KeyboardEvent) {
-    if (true) {
       // Only handle the keystroke if the event target is the body element
       if (event.key === 'ArrowDown' || event.key === 'PageDown') {
-        this.changeToNextPageDown();
+        if(this.section_screen_animation_done)
+        {
+          this.changeToNextPageDown();
+        }
       }
       else if (event.key === 'ArrowUp' || event.key === 'PageUp') {
-        this.changeToNextPageUp();
+        if(this.section_screen_animation_done)
+        {
+          this.changeToNextPageUp();
+        }
       }
 
       else if(event.key == 'Enter' && this.modal_is_open)
       {
         this.closeModal();
       }
-    }
+    
+  }
+
+  onAnimationDone($event: AnimationEvent) {
+    console.log("event time: " + $event.totalTime);
+    console.log("event state " + $event.fromState);
+    this.section_screen_animation_done = true;
+    console.log("animation done");
   }
 
 
