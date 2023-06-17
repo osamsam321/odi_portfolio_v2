@@ -255,14 +255,16 @@ Looking back at my time at Dunbar Consulting, I am proud of my contributions to 
 </section>
 
 
-<img id="move_down_arrow" (click)="changeToNextPageDown()"  src="../../../assets/img/about-me/icons8-arrow-100 (1).png"> 
+<!-- <img id="move_down_arrow" (click)="changeToNextPageDown()"  src="../../../assets/img/about-me/icons8-arrow-100 (1).png">  -->
 <div id="page_dot_value_cont">
-  
-  <div class="page_dot_value" id="page1_dot_value"> </div>
-  <div class="page_dot_value" id="page2_dot_value"> </div>
-  <div class="page_dot_value" id="page3_dot_value"> </div>
+
+  <div class="page_dot_value" #page0_dot_value id="page0_dot_value" (click)="updateCurrentPageVal(0)"> </div>
+  <div class="page_dot_value" #page1_dot_value id="page1_dot_value" (click)="updateCurrentPageVal(1)"> </div>
+  <div class="page_dot_value" #page2_dot_value id="page2_dot_value" (click)="updateCurrentPageVal(2)"> </div>
 
 </div>
+
+
 </Main>
 
   

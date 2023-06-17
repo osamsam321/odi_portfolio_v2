@@ -24,10 +24,10 @@ import {
         backgroundColor: 'rgba(150,130,50,.12)'
       })),
       transition('open => closed', [
-        animate('0.25s')
+        animate('0.15s')
       ]),
       transition('closed => open', [
-        animate('0.25s')
+        animate('0.15s')
       ]),
     ]),
   ],
@@ -48,8 +48,11 @@ export class AboutMeComponent implements AfterViewInit {
   @ViewChild('skills_container_section') skills_box_section_ref!: ElementRef ;
   @ViewChild('about_me_section') about_me_section_ref!: ElementRef ;
   @ViewChild('dunbar_work_experience_section') dunbar_work_experience_section_ref!: ElementRef ;
+  @ViewChild('page0_dot_value', { static: false }) page0_dot_value!: ElementRef ;
+  @ViewChild('page1_dot_value', { static: false }) page1_dot_value!: ElementRef ;
+  @ViewChild('page2_dot_value', { static: false }) page2_dot_value!: ElementRef ;
 
-  
+  page_dot_List!:ElementRef[];
   page_element_ref_list: ElementRef<any>[] = [];
 
 
@@ -62,6 +65,9 @@ export class AboutMeComponent implements AfterViewInit {
   ngAfterViewInit(): void {
       this.page_element_ref_list = [this.skills_box_section_ref, this.about_me_section_ref, 
         this.dunbar_work_experience_section_ref];
+        this. page_dot_List = 
+        [this.page0_dot_value, this.page1_dot_value, this.page2_dot_value];
+        this.updateDotValue(this.current_page_val);
     
     console.log("element ref_list size: " + this.page_element_ref_list.length);
   }
@@ -71,18 +77,36 @@ export class AboutMeComponent implements AfterViewInit {
  
     this.current_page_val = (this.current_page_val <= 0)?
     this.page_element_ref_list.length - 1: this.current_page_val - 1;
-
+    this.updateDotValue(this.current_page_val);
     console.log("current page value: " + this.current_page_val);
     console.log("page element list size: " + this.page_element_ref_list.length);
   }
   //increment page index
   changeToNextPageDown() {
     this.current_page_val = (this.current_page_val + 1) % this.page_element_ref_list.length;
+    this.updateDotValue(this.current_page_val);
     console.log("current page value: " + this.current_page_val);
     console.log("page element list size: " + this.page_element_ref_list.length);
     // this.showNewPage(this.current_page_val);
   }
 
+  updateCurrentPageVal(page_val:number)
+  {
+    this.current_page_val = page_val;
+    this.updateDotValue(this.current_page_val);
+  }
+  resetDotStyle()
+  {
+    for(let elref of this.page_dot_List)
+    {
+      this.r2.setStyle(elref.nativeElement, "background-color", 'white' );
+    }
+  }
+  updateDotValue(page_val:number)
+  {
+    this.resetDotStyle();
+    this.r2.setStyle(this.page_dot_List[page_val].nativeElement, "background-color", 'blue' );
+  }
   
    openModal() {
     if(!this.modal_is_open){
