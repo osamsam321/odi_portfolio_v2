@@ -30,8 +30,10 @@
             <h1 class="title">Skills</h1>
           </div>
 
-        <div  id="java_skills_box_cont" #skills_box_cont class="skill_box_cont" 
-          (click) ="skillsBoxClicked($event)" > 
+          <div class="hidden" tabindex="0"> </div>
+
+        <div  id="java_skills_box_cont" class="skill_box_cont" 
+          (click) ="skillsBoxClicked($event)" tabindex="1" > 
           <div class="skills_cont_img_wrap"> 
             <img class="skills_cont_img" src = '../../../assets/img/about-me/icons8-java-50.png'>
           </div>
@@ -40,8 +42,8 @@
 
         </div>
 
-        <div id="linux_skills_box_cont" #skills_box_cont class="skill_box_cont"  
-         (click) ="skillsBoxClicked($event)" > 
+        <div id="linux_skills_box_cont"  class="skill_box_cont"  
+         (click) ="skillsBoxClicked($event)" tabindex="2" > 
         <div class="skills_cont_img_wrap"> 
           <img class="skills_cont_img" src = '../../../assets/img/about-me/icons8-linux-48.png'>
         </div>
@@ -51,8 +53,8 @@
 
         </div>
 
-        <div id="python_skills_box_cont" #skills_box_cont class="skill_box_cont"  
-          (click) ="skillsBoxClicked($event)" > 
+        <div id="python_skills_box_cont"  class="skill_box_cont"  
+          (click) ="skillsBoxClicked($event)" tabindex="3" > 
          <div class="skills_cont_img_wrap"> 
           <img class="skills_cont_img" src = '../../../assets/img/about-me/icons8-python-48.png'>
         </div>
@@ -63,7 +65,7 @@
         </div>
 
         <div id="aws_skills_box_cont" #skills_box_cont class="skill_box_cont"  
-         (click) ="skillsBoxClicked($event)" > 
+         (click) ="skillsBoxClicked($event)" tabindex="4"> 
         <div class="skills_cont_img_wrap"> 
           <img class="skills_cont_img" src = '../../../assets/img/about-me/icons8-amazon-web-services-48.png'>
         </div>
@@ -74,7 +76,7 @@
         </div>
 
         <div id="microsoft_skills_box_cont" #skills_box_cont class="skill_box_cont"  
-       (click) ="skillsBoxClicked($event)" > 
+       (click) ="skillsBoxClicked($event)" tabindex="5"> 
         <div class="skills_cont_img_wrap"> 
           <img class="skills_cont_img" src = '../../../assets/img/about-me/icons8-microsoft-48.png'>
         </div>
@@ -85,7 +87,7 @@
         </div>
 
         <div id="frontend_skills_box_cont" #skills_box_cont class="skill_box_cont"  
-         (click) ="skillsBoxClicked($event)" > 
+         (click) ="skillsBoxClicked($event)" tabindex="6"> 
         <div class="skills_cont_img_wrap"> 
           <img class="skills_cont_img" src = '../../../assets/img/about-me/icons8-front-end-64.png'>
         </div>

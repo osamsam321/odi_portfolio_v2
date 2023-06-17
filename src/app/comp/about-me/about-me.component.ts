@@ -184,7 +184,10 @@ export class AboutMeComponent implements AfterViewInit {
           this.changeToNextPageUp();
         }
       }
-
+      else if(event.key === 'Tab')
+      {
+        
+      }
       else if(event.key == 'Enter' && this.modal_is_open)
       {
         this.closeModal();

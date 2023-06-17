@@ -12,7 +12,7 @@ export class AppComponent implements AfterViewChecked {
 
   links = ["home", "projects", "about_me", 'misc'];
 
-  linkIndex = 0;
+  // linkIndex = 0;
   
   constructor (private router: Router, private elementRef: ElementRef, private navComponent: NavComponent)
   {
@@ -27,25 +27,25 @@ export class AppComponent implements AfterViewChecked {
   }
   ngInit()
   {
-    const element = this.elementRef.nativeElement.querySelector('#parent_wrap');
+    // const element = this.elementRef.nativeElement.querySelector('#parent_wrap');
 
-    if (element) {
-            element.focus();
-    }
+    // if (element) {
+    //         element.focus();
+    // }
   }
 
   
   updateNavByUrl(url: String)
   {
     
-    console.log("router url : " + url.replace('/', ""));
-    this.navComponent.focusLink(url.replace('/', ""));
+    // console.log("router url : " + url.replace('/', ""));
+    // this.navComponent.focusLink(url.replace('/', ""));
   }
   updateNav()
   {
     
-    console.log("router url in basic: " + this.router.url.replace('/', ""));
-    this.navComponent.focusLink(this.router.url.replace('/', ""));
+    // console.log("router url in basic: " + this.router.url.replace('/', ""));
+    // this.navComponent.focusLink(this.router.url.replace('/', ""));
   }
 }
 

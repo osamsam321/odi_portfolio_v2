@@ -46,15 +46,24 @@ h1, h2, p, h3{
     padding: 5px;
     border-radius: 5px;
     background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.social_media_icon:hover
-{
-    width: 25px;
+.social_media_icon img{
+  width: 25px;
     height: 25px;
     padding: 5px;
-    border-radius: 5px;
-    background-color: yellow;
 }
+
+.social_media_icon:hover, .social_media_icon:focus
+{
+    background-color: yellow;
+    text-decoration: none;
+    outline: none;
+}
+
+
 
 /* arial objects */
 .sky {

@@ -1,5 +1,5 @@
 import { Location } from '@angular/common';
-import { AfterViewInit, Component, ElementRef, HostListener, Injectable, OnInit, Renderer2 } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, Injectable, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
 
@@ -16,17 +16,24 @@ export class NavComponent implements OnInit, AfterViewInit	 {
 
 
   links = ["home", "projects", "about_me", 'misc'];
-  tabIndex = 0;
   linkIndex = 0;
   isFocused = false;
   currentUrl: any;
   route!:string;
-  constructor(private renderer: Renderer2, private el: ElementRef, private router: Router,
+  @ViewChild('nav_home_link', { static: false }) nav_home_link_er!: ElementRef;
+  @ViewChild('nav_projects_link', { static: false }) nav_projects_link_er!: ElementRef;
+  @ViewChild('nav_about_me_link', { static: false }) nav_about_me_link_er!: ElementRef;
+  @ViewChild('nav_misc_link', { static: false }) nav_misc_link_er!: ElementRef;
+
+  links_er!:ElementRef[];
+
+  constructor(private r2: Renderer2, private el: ElementRef, private router: Router,
     private activated_route: ActivatedRoute, private location: Location) {}
   ngAfterViewInit(): void {
     this.prepare_nav();
-
-
+    this.links_er = [this.nav_home_link_er, this.nav_projects_link_er, 
+      this.nav_about_me_link_er, this.nav_misc_link_er]
+      this.focusLink(this.linkIndex);
   }
   ngOnInit(): void {
     console.log("word");
@@ -43,20 +50,27 @@ export class NavComponent implements OnInit, AfterViewInit	 {
     });
   }
   
-  
-  focusLink(nav_value: String)
+  resetNavLinkStyle()
   {
-    console.log("nav_value: " + nav_value);
-    let inputElement = this.el.nativeElement.querySelector('#'+nav_value);
-    console.log(inputElement.id);
-    this.renderer.selectRootElement(inputElement, true).focus();
+    for(let nav_er of this.links_er )
+    {
+      this.r2.setStyle(nav_er.nativeElement, 'color', 'white');
+    }
+  }
+  
+  focusLink(nav_index: number)
+  {
+    console.log("nav_value: " + nav_index);
+    // console.log(inputElement.id);
+    this.resetNavLinkStyle();
+     this.r2.setStyle(this.links_er[nav_index].nativeElement, 'color', 'red');
   }
 
-  updateNav()
+  updateNav(nav_index: number)
   {
     
-    console.log("router url in basic: " + this.router.url.replace('/', ""));
-    this.focusLink(this.router.url.replace('/', ""));
+    // console.log("router url in basic: " + this.router.url.replace('/', ""));
+    this.focusLink(nav_index);
   }
 
   @HostListener('document:keydown', ['$event'])
@@ -76,7 +90,7 @@ export class NavComponent implements OnInit, AfterViewInit	 {
     console.log('link index value {}', this.linkIndex);
 
     this.router.navigate([this.links[this.linkIndex]]);
-    this.updateNav();
+    this.updateNav(this.linkIndex);
 
   }
 

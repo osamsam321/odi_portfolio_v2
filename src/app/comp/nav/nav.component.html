@@ -7,11 +7,10 @@
      </div>  -->
 
     <nav  class="nav-container" fxFlex="50%" fxLayout = 'row' fxLayoutAlign="space-around" fxFlexAlign="center"  class="nav-container">
-        
-             <a  id ='home' [routerLink]="['/home']" (click)="updateNavIndex(0)"> Home </a> 
-            <a id ='projects'  [routerLink]="['/projects']" (click)="updateNavIndex(1)"> Projects </a> 
-            <a id ='about_me' [routerLink]="['/about_me']" (click)="updateNavIndex(2)"> About Me</a> 
-            <a id ='misc' [routerLink]="['/misc']" (click)="updateNavIndex(3)"> Misc </a> 
+             <a  id ='home' tabindex="-1" #nav_home_link [routerLink]="['/home']" (click)="updateNavIndex(0)"> Home </a> 
+            <a id ='projects' tabindex="-1" #nav_projects_link [routerLink]="['/projects']" (click)="updateNavIndex(1)"> Projects </a> 
+            <a id ='about_me' tabindex="-1" #nav_about_me_link [routerLink]="['/about_me']" (click)="updateNavIndex(2)"> About Me</a> 
+            <a id ='misc' tabindex="-1" #nav_misc_link [routerLink]="['/misc']" (click)="updateNavIndex(3)"> Misc </a> 
             
 
 
