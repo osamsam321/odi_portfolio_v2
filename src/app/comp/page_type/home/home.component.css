@@ -74,7 +74,7 @@ h1, h2, p, h3{
     background-color: transparent;
   }
 
-  .plane {
+  .plane_move_left {
     position: absolute;
     top: 0%;
     transform: translateY(-50%);
@@ -82,16 +82,38 @@ h1, h2, p, h3{
     height: 20px;
     background-size: cover;
     background-repeat: no-repeat;
-    animation: move 8s linear infinite;
     opacity: .6;
+    animation: move_arial_left 8s linear infinite;
+
+  }
+  .plane_move_right {
+    position: absolute;
+    top: 0%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: .6;
+    animation: move_arial_right 8s linear infinite;
+
   }
   
-  @keyframes move {
+  @keyframes move_arial_left {
     from {
-      left: 100%;
+      left: 105vw;
     }
     to {
-      left: -100px;
+      left: -5vw;
+    }
+  }
+
+  @keyframes move_arial_right {
+    from {
+      left: 0vw;
+    }
+    to {
+      left: 105vw;
     }
   }
   

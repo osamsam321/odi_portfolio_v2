@@ -54,7 +54,7 @@ export class NavComponent implements OnInit, AfterViewInit	 {
   {
     for(let nav_er of this.links_er )
     {
-      this.r2.setStyle(nav_er.nativeElement, 'color', 'white');
+      this.r2.setStyle(nav_er.nativeElement, 'color', 'rgb(245,245,245)');
     }
   }
   
@@ -68,8 +68,7 @@ export class NavComponent implements OnInit, AfterViewInit	 {
 
   updateNav(nav_index: number)
   {
-    
-    // console.log("router url in basic: " + this.router.url.replace('/', ""));
+    this.linkIndex = nav_index;
     this.focusLink(nav_index);
   }
 
@@ -94,9 +93,7 @@ export class NavComponent implements OnInit, AfterViewInit	 {
 
   }
 
-  updateNavIndex(index_value: number) {
-    this.linkIndex = index_value;
-  }
+  
   // ngOnInit()
   // {
 

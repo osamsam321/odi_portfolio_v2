@@ -143,6 +143,7 @@ export class AboutMeComponent implements AfterViewInit {
  
   skillsBoxClicked(event: Event)
   {
+    console.log("skills box clicked");
     const clickedElement = event.target as HTMLDivElement;
     const id = clickedElement.id;
     this.model_to_open_title = id;
@@ -151,7 +152,7 @@ export class AboutMeComponent implements AfterViewInit {
     this.openModal();    
   }
   
-  magePageClicked(event: Event)
+  mainPageClicked(event: Event)
   {
     const model_clicked = this.model_ref?.nativeElement.contains(event.target);
 
@@ -186,11 +187,25 @@ export class AboutMeComponent implements AfterViewInit {
       }
       else if(event.key === 'Tab')
       {
-        
+
       }
-      else if(event.key == 'Enter' && this.modal_is_open)
+      else if(event.key == 'Enter')
       {
-        this.closeModal();
+        if(this.section_screen_animation_done)
+        {
+          if(!this.modal_is_open)
+          {
+            console.log("enter pressed");
+            this.skillsBoxClicked(event);
+          }
+
+          else
+          {
+            this.closeModal();
+          }
+        
+        }
+        
       }
     
   }

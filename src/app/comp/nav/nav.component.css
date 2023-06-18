@@ -15,12 +15,15 @@ nav
 }
 h3, a{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: rgb(181, 184, 184);
+    color: rgb(245, 255, 107);
     cursor: pointer;
     font-size: 20px;
     text-decoration: none;
 }
-
+a:hover
+{
+  color: rgb(251, 251, 182)!important;
+}
 #nav_logo
 {
     width: 100%;
@@ -54,8 +57,5 @@ h3, a{
     color: red;
   }
 
-  a:hover
-  {
-    color: yellow;
-  }
+ 
   

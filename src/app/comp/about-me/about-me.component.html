@@ -1,5 +1,5 @@
 
-<Main #main_page (click) = "magePageClicked($event)">
+<Main #main_page (click) = "mainPageClicked($event)">
 
     <section [@openClose] = "current_page_val == 0? 'open': 'closed'" id = "about_me_section"  
     #about_me_section (@openClose.done)="onAnimationDone($event)" >
