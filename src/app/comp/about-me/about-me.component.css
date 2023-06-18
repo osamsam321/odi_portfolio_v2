@@ -293,8 +293,8 @@ section{
 }
 .page_dot_value
 {
-  height: 20px;
-  width: 20px;
+  height: 18px;
+  width: 18px;
   margin-top: 30px;
   border-radius: 50%;
   box-shadow: 50px 0 50px rgba(213, 66, 21, 1);

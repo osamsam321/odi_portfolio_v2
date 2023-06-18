@@ -19,7 +19,7 @@ h1{
     color: white;
     margin-bottom: 100px;
     margin-top: 80px;
-    font-size: 45px;
+    font-size: 35px;
 }
 .header {
     color: #007BFF;
@@ -36,20 +36,20 @@ h1{
 .info-link {
     text-decoration: none;
     color: #f5f5f5;
-    border-right: 2px solid #0051ff;
-    border-left: 2px solid #0051ff;
-    border-top: 2px solid #0051ff;
+    /* border-right: 2px solid #0051ff;
+    border-left: 2px solid #0051ff; */
+    border-top: 2px solid #0051ff; 
     box-shadow: 
         0 1px 1px rgba(174, 188, 93, 0.965), 
-        0 2px 2px rgba(234, 242, 14, 0.967), 
-        0 4px 4px rgba(38, 7, 238, 0.929), 
-        0 4px 4px rgba(10, 151, 222, 0.926), 
-        0 12px 12px rgba(7, 164, 248, 0.536);
+        0 1px 0px rgba(234, 242, 14, 0.967), 
+        0 2px 0px rgba(38, 7, 238, 0.929), 
+        0 2px 4px rgba(10, 151, 222, 0.926), 
+        0 8px 8px rgba(7, 164, 248, 0.536);
 
     padding: 10px;
     margin-top: 50px;
-    min-height: 35px;
-    min-width: 400px;
+    min-height: 30px;
+    min-width: 500px;
     border-radius: 10px;
     transition: all 0.3s ease-in-out;
     font-size: 20px;
