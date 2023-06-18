@@ -15,7 +15,6 @@
 }
 h1{
     font-family: Georgia, 'Times New Roman', Times, serif !important;
-
     text-align: center;
     color: white;
     margin-bottom: 100px;
@@ -36,16 +35,25 @@ h1{
 
 .info-link {
     text-decoration: none;
-    color: #cbcbcb;
-    border: 1px solid #007BFF;
+    color: #f5f5f5;
+    border-right: 2px solid #0051ff;
+    border-left: 2px solid #0051ff;
+    border-top: 2px solid #0051ff;
+    box-shadow: 
+        0 1px 1px rgba(174, 188, 93, 0.965), 
+        0 2px 2px rgba(234, 242, 14, 0.967), 
+        0 4px 4px rgba(38, 7, 238, 0.929), 
+        0 4px 4px rgba(10, 151, 222, 0.926), 
+        0 12px 12px rgba(7, 164, 248, 0.536);
+
     padding: 10px;
     margin-top: 50px;
-    min-height: 50px;
-    min-width: 500px;
+    min-height: 35px;
+    min-width: 400px;
     border-radius: 10px;
     transition: all 0.3s ease-in-out;
     font-size: 20px;
-    background-color: rgb(4, 41, 73);
+    background-color: rgb(16, 32, 54);
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-stretch: expanded;
 
