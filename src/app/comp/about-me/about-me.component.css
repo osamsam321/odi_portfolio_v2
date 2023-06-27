@@ -6,6 +6,12 @@
   margin-top: 5%;
   width: 100%;
   padding: 10px;
+
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .model_skill_description
@@ -57,6 +63,8 @@ section{
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
+    animation: fadeIn .3s ease-in-out; 
+
   }
   
   .profile-pic {
@@ -109,6 +117,8 @@ section{
     transition: all 0.3s ease-in-out;
     align-items: center;   
     color: #333; /* Text color */
+    animation: fadeIn .3s ease-in-out; 
+
     
   }
 

@@ -1,32 +1,56 @@
     
     
    <main>
-    <div class="project-box">
-        <img class="project-image" src="../../../../assets/img/projects/Screenshot from 2023-06-27 02-08-48.png" alt="Project Image">
-        <h2 class="project-title">Project Title</h2>
-        <p class="project-description">This is a description of the project. It talks about what the project does, who it's for, and any other relevant details.</p>
-        <a class="project-link" href="https://github.com/username/project">View on GitHub</a>
-    </div>
+    <section [@openClose] = "current_page_val == 0? 'open': 'closed'" id = "about_me_section"  
+    #page_1 (@openClose.done)="onAnimationDone($event)" >
 
-    <div class="project-box">
-        <img class="project-image" src="../../../../assets/img/projects/SQL_extrator_Net_Core.png" alt="Project Image">
-        <h2 class="project-title">Project Title</h2>
-        <p class="project-description">This is a description of the project. It talks about what the project does, who it's for, and any other relevant details.</p>
-        <a class="project-link" href="https://github.com/username/project">View on GitHub</a>
-    </div>
+        <div class="project-box">
+            <img class="project-image" src="../../../../assets/img/projects/Screenshot from 2023-06-27 02-08-48.png" alt="Project Image">
+            <h2 class="project-title">Project Title</h2>
+            <p class="project-description">This is a description of the project. It talks about what the project does, who it's for, and any other relevant details.</p>
+            <div class="col_flex_cont" > 
+                <a class="project-link" href="https://github.com/username/project">View on GitHub</a>
+                <h4 class="year_active"> Year: 2023 </h4>
+                <h4 class="status status_active_color"> Active </h4>
+            </div>
+        </div>
+    
+        <div class="project-box">
+            <img class="project-image" src="../../../../assets/img/projects/SQL_extrator_Net_Core.png" alt="Project Image">
+            <h2 class="project-title">Project Title</h2>
+            <p class="project-description">This is a description of the project. It talks about what the project does, who it's for, and any other relevant details.</p>
+            <div class="col_flex_cont" > 
+                <a class="project-link" href="https://github.com/username/project">View on GitHub</a>
+                <h4 class="year_active"> Year: 2022 </h4>
+                <h4 class="status status_active_color"> Active </h4>
+            </div>
+        </div>
+    
+        <div class="project-box">
+            <img class="project-image" src="../../../../assets/img/projects//bbo_screanshot.png" alt="Project Image">
+            <h2 class="project-title">Project Title</h2>
+            <p class="project-description">This is a description of the project. It talks about what the project does, who it's for, and any other relevant details.</p>
+            <div class="col_flex_cont" > 
+                <a class="project-link" href="https://github.com/username/project">View on GitHub</a>
+                <h4 class="year_active"> Year: 2022 </h4>
+                <h4 class="status status_not_active_color"> Not Active </h4>
+            </div>
+        </div>
+    
 
-    <div class="project-box">
-        <img class="project-image" src="../../../../assets/img/projects//bbo_screanshot.png" alt="Project Image">
-        <h2 class="project-title">Project Title</h2>
-        <p class="project-description">This is a description of the project. It talks about what the project does, who it's for, and any other relevant details.</p>
-        <a class="project-link" href="https://github.com/username/project">View on GitHub</a>
-    </div>
-
+    </section>
+    <section [@openClose] = "current_page_val == 1? 'open': 'closed'" id = "about_me_section"  
+    #page_2 (@openClose.done)="onAnimationDone($event)" >
+    
     <div class="project-box">
         <img class="project-image" src="../../../../assets/img/projects/Screenshot from 2023-06-27 01-13-04.png" alt="Project Image">
         <h2 class="project-title">Project Title</h2>
         <p class="project-description">This is a description of the project. It talks about what the project does, who it's for, and any other relevant details.</p>
-        <a class="project-link" href="https://github.com/username/project">View on GitHub</a>
+        <div class="col_flex_cont" > 
+            <a class="project-link" href="https://github.com/username/project">View on GitHub</a>
+            <h4 class="year_active"> Year: 2021 </h4>
+            <h4 class="status status_not_active_color"> Not Active </h4>
+        </div>
     </div>
 
 
@@ -34,10 +58,23 @@
         <img class="project-image" src="../../../../assets/img/projects/Screenshot from 2023-06-27 02-00-40.png" alt="Project Image">
         <h2 class="project-title">Project Title</h2>
         <p class="project-description">This is a description of the project. It talks about what the project does, who it's for, and any other relevant details.</p>
-        <a class="project-link" href="https://github.com/username/project">View on GitHub</a>
+        <div class="col_flex_cont" > 
+            <a class="project-link" href="https://github.com/username/project">View on GitHub</a>
+            <h4 class="year_active"> Year: 2020 </h4>
+            <h4 class="status status_not_active_color"> Not Active </h4>
+        </div>
     </div>
 
 
+      </section>
+
+      <div id="page_dot_value_cont">
+
+        <div class="page_dot_value" #page0_dot_value id="page0_dot_value" (click)="updateCurrentPageVal(0)"> </div>
+        <div class="page_dot_value" #page1_dot_value id="page1_dot_value" (click)="updateCurrentPageVal(1)"> </div>
+        <div class="page_dot_value" #page2_dot_value id="page2_dot_value" (click)="updateCurrentPageVal(2)"> </div>
+      
+      </div>
    </main> 
 
 

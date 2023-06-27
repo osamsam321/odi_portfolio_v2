@@ -9,7 +9,14 @@ main
     background-image: url('../../../../assets/img/home_img/blue-mountain-vugxyc127quhpdj_walpaper.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: rgba(0, 0, 0, 0.2); 
+    background-color: rgba(0, 0, 0, 0.2);
+ 
+}
+/* animation: fadeIn .7s ease-in-out; */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 h1
@@ -32,7 +39,8 @@ h1, h2, p, h3{
 }
 .basic_div_wrap
 {
-    
+  animation: fadeIn .7s ease-in-out; 
+
 }
 #basic_img_wrap
 {
