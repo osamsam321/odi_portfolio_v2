@@ -36,8 +36,9 @@ export class NavComponent implements OnInit, AfterViewInit	 {
       this.focusLink(this.linkIndex);
   }
   ngOnInit(): void {
-    console.log("word");
-}
+    this.router.navigate([this.links[0]]);
+
+  }
   prepare_nav()
   {
     this.router.events.subscribe((val) => {

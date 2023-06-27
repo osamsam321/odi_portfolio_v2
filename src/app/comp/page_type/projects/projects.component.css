@@ -1,11 +1,13 @@
 .project-box {
-    width: 70%;
     margin: 3% auto;
     padding: 20px;
     border-radius: 5px;
     background-color: rgb(52, 51, 51);
     box-shadow: 0px 0px 10px 0px rgb(31, 145, 239);
     transition: all 0.3s ease-in-out;
+    display: flex;
+    width: 1100px;
+    justify-content: space-around;
 }
 main{
 
@@ -19,13 +21,10 @@ main{
     overflow-y: hidden; 
 }
 .project-box:hover {
-    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 20px 0px rgba(225, 240, 10, 0.807);
 }
 
-.project-image {
-    width: 100%;
-    height: auto;
-}
+
 
 .project-title {
     font-size: 1.5em;
@@ -44,41 +43,17 @@ main{
 }
 
 
+.project-image{
+    width: 400px;
+    height: 180px;
+    border-radius: 20px;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* p,h1{
-    color: white;
 }
-
-main{
-    width: 100%;
-    height: 100%;
-    background-image: url('../../../../assets/img/home_img/blue-mountain-vugxyc127quhpdj_walpaper.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: rgba(255, 255, 255, 0.5); 
-}
-.project_box
+.project-box
 {
-    width: 75%;
-} */
+    
+}
+.project-description
+{
+    width: 30%;
+}

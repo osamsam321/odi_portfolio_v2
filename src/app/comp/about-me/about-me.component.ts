@@ -22,13 +22,13 @@ AnimationEvent,
       state('closed', style({
         height: '95vh',
         display: 'none',
-        backgroundColor: 'rgba(150,130,50,.12)'
+        backgroundColor: 'rgba(50, 50, 50,.12)'
       })),
       transition('open => closed', [
-        animate('.15s')
+        animate('.20s')
       ]),
       transition('closed => open', [
-        animate('.15s')
+        animate('.20s')
       ]),
     ]),
   ],
@@ -118,7 +118,8 @@ export class AboutMeComponent implements AfterViewInit {
   updateDotValue(page_val:number)
   {
     this.resetDotStyle();
-    this.r2.setStyle(this.page_dot_List[page_val].nativeElement, "background-color", 'blue' );
+    this.r2.setStyle(this.page_dot_List[page_val].nativeElement, 
+      "background-color", 'rgba(200, 200, 50, 1)' );
   }
   
    openModal() {
@@ -171,13 +172,20 @@ export class AboutMeComponent implements AfterViewInit {
   }
 
    @HostListener('document:keydown', ['$event'])
-  handleKeyDownPress(event: KeyboardEvent) {
-      // Only handle the keystroke if the event target is the body element
-      if (event.key === 'ArrowDown' || event.key === 'PageDown') {
-        if(this.section_screen_animation_done)
-        {
+   @HostListener('window:wheel', ['$event'])
+  handleKeyDownPress(event: KeyboardEvent | WheelEvent) {
+    
+    if(!this.section_screen_animation_done)
+    {
+      return;
+    }
+    else if(event instanceof KeyboardEvent)
+    {
+        // Only handle the keystroke if the event target is the body element
+      if (event.key === 'ArrowDown' || event.key === 'PageDown' || event.key === 'Mou') {
+
           this.changeToNextPageDown();
-        }
+
       }
       else if (event.key === 'ArrowUp' || event.key === 'PageUp') {
         if(this.section_screen_animation_done)
@@ -207,7 +215,24 @@ export class AboutMeComponent implements AfterViewInit {
         }
         
       }
+    }
     
+    else if (event instanceof WheelEvent) {
+      // Mouse scroll event
+      const scrollDistance = event.deltaY;
+      if (scrollDistance > 0) {
+        // Scrolling down
+        console.log('Scrolling down');
+        this.changeToNextPageDown();
+
+      } else if (scrollDistance < 0) {
+        // Scrolling up
+        console.log('Scrolling up');
+        this.changeToNextPageUp();
+
+      }
+      
+    }
   }
 
   onAnimationDone($event: AnimationEvent) {
