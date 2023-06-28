@@ -1,6 +1,6 @@
 #parent_nav_element
 {
-    padding: 20px;
+    padding: 17px;
     overflow: hidden;
     background-color: #242323;
     position: fixed;
@@ -17,7 +17,7 @@ h3, a{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(245, 255, 107);
     cursor: pointer;
-    font-size: 20px;
+    font-size: 18.5px;
     text-decoration: none;
 }
 a:hover
