@@ -13,7 +13,19 @@
     background-color: rgba(0, 0, 0, 0.2);
     margin: 0px; 
     overflow-y: hidden;
- 
+
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+.get_animated
+{
+    animation: fadeIn .5s ease-in-out; 
+
 }
 h1{
     font-family: Georgia, 'Times New Roman', Times, serif !important;

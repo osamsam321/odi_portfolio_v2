@@ -15,7 +15,7 @@ export class NavComponent implements OnInit, AfterViewInit	 {
 
 
 
-  links = ["home", "projects", "about_me", 'misc'];
+  links = ["home", "about_me", "projects",  'misc'];
   linkIndex = 0;
   isFocused = false;
   currentUrl: any;
@@ -31,8 +31,8 @@ export class NavComponent implements OnInit, AfterViewInit	 {
     private activated_route: ActivatedRoute, private location: Location) {}
   ngAfterViewInit(): void {
     this.prepare_nav();
-    this.links_er = [this.nav_home_link_er, this.nav_projects_link_er, 
-      this.nav_about_me_link_er, this.nav_misc_link_er]
+    this.links_er = [this.nav_home_link_er, this.nav_about_me_link_er, this.nav_projects_link_er, 
+       this.nav_misc_link_er]
       this.focusLink(this.linkIndex);
   }
   ngOnInit(): void {

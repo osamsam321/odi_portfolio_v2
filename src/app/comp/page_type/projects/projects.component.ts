@@ -37,17 +37,22 @@ export class ProjectsComponent implements AfterViewInit{
   @ViewChild('page0_dot_value', { static: false }) page0_dot_value!: ElementRef ;
   @ViewChild('page1_dot_value', { static: false }) page1_dot_value!: ElementRef ;
   @ViewChild('page2_dot_value', { static: false }) page2_dot_value!: ElementRef ;
+  @ViewChild('modal', { static: false }) model_ref?: ElementRef ;
+
   section_screen_animation_done = true;
   current_page_val = 0;
+  modal_is_open = false;
+  new_modal_opened = false;
+  model_to_open_title?: string;
 
   constructor(private model: ElementRef, private r2: Renderer2, 
     page_2_ref: ElementRef,  page_1_ref: ElementRef,
     dunbar_work_experience_section_ref: ElementRef){}
     ngAfterViewInit(): void {
     this.page_element_ref_list = [this.page_2_ref, this.page_1_ref, 
-      this.dunbar_work_experience_section_ref];
+      ];
       this. page_dot_List = 
-      [this.page0_dot_value, this.page1_dot_value, this.page2_dot_value];
+      [this.page0_dot_value, this.page1_dot_value];
       this.updateDotValue(this.current_page_val);
     }
 
@@ -82,6 +87,24 @@ export class ProjectsComponent implements AfterViewInit{
     // this.showNewPage(this.current_page_val);
   }
 
+  openModal() {
+    if(!this.modal_is_open){
+
+      console.log("show model");
+
+      this.modal_is_open = true;
+
+    }
+  }
+
+  closeModal() {
+    console.log("inside of close model");
+  // this.r2.setStyle(this.model_ref, "display", "hidden");
+    if(this.modal_is_open)
+    {
+      this.modal_is_open = false;
+    }
+  }
   updateCurrentPageVal(page_val:number)
   {
     
@@ -103,6 +126,16 @@ export class ProjectsComponent implements AfterViewInit{
       "background-color", 'rgba(200, 200, 50, 1)' );
   }
 
+  skillsBoxClicked(event: Event)
+  {
+    console.log("skills box clicked");
+    const clickedElement = event.target as HTMLDivElement;
+    const id = clickedElement.id;
+    this.model_to_open_title = id;
+    this.new_modal_opened = true;
+    this.closeModal();
+    this.openModal();    
+  }
   onAnimationDone($event: AnimationEvent) {
     this.section_screen_animation_done = true;
     console.log("animation done");
@@ -128,6 +161,24 @@ export class ProjectsComponent implements AfterViewInit{
        {
          this.changeToNextPageUp();
        }
+     }
+     else if(event.key == 'Enter')
+     {
+       if(this.section_screen_animation_done)
+       {
+         if(!this.modal_is_open)
+         {
+           console.log("enter pressed");
+           this.skillsBoxClicked(event);
+         }
+
+         else
+         {
+           this.closeModal();
+         }
+       
+       }
+       
      }
      else if(event.key === 'Tab')
      {

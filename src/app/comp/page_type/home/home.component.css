@@ -124,6 +124,17 @@ h1, h2, p, h3{
       left: 105vw;
     }
   }
+  .title_name
+  {
+    font-family: 'Verdana';
+  }
+  .small_phrase
+  {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(255, 255, 250);
+    font-family: Arial, Helvetica, sans-serif;
+  }
   
 /* 
 /* shooting start style */

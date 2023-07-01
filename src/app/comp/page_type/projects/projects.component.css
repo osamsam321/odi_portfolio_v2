@@ -1,11 +1,11 @@
 .project-box {
-    margin: 3% auto;
+    margin: 2% auto;
     padding: 20px;
     border-radius: 5px;
     background-color: rgb(52, 51, 51);
     box-shadow: 0px 0px 10px 0px rgb(31, 145, 239);
     /* transition: all 0.3s ease-in-out; */
-    animation: fadeIn .5s ease-in-out;
+    animation: fadeIn 0s ease-in-out;
     display: flex;
     width: 1100px;
     justify-content: space-around;
@@ -28,14 +28,16 @@ main{
     overflow-y: hidden; 
 }
 .project-box:hover, .project-box:focus {
-    box-shadow: 0px 0px 20px 0px rgba(225, 240, 10, 0.807);
+    box-shadow: 2px 2px 15px 2px rgba(225, 240, 10, 0.807);
+    /* transform: scale(1.002); */
+    transition: all 0s ease-in-out;
     outline: none;
 }
 
 
 
 .project-title {
-    font-size: 1.3em;
+    font-size: 1.1em;
     margin: auto;
     text-align: center;
     color: #f0eeee;
@@ -46,22 +48,35 @@ main{
     font-size: 1.2em;
     color: #fff8f8;
     margin: 10px 0;
-    word-spacing:2.5px;
+    word-spacing:2.0px;
     line-height: 26px;
     
 }
 
 .project-link {
-    color: #0066ff;
+    color: #759ad2;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+}
+.project-link:hover{
+    color: #dbe21c;
     text-decoration: none;
 }
 
-
 .project-image{
-    width: 400px;
+    width: 300px;
     height: 180px;
     border-radius: 20px;
+}
+.project-image:hover{
+   /* box-shadow: 
+        0 2px 4px rgba(172, 26, 26, 0.965), 
+        0 2px 2px rgba(52, 52, 49, 0.967), 
+        0 1px 0px rgba(124, 20, 38, 0.929), 
+        0 1px 3px rgba(146, 31, 38, 0.926), 
+        0 3px 3px rgba(131, 40, 35, 0.536); */
 
+   
 }
 .project-box
 {
@@ -69,7 +84,7 @@ main{
 }
 .tile_description_cont
 {
-    width: 300px;
+    width: 350px;
     margin: auto;
     text-align:center;
 }
@@ -93,18 +108,18 @@ main{
 }
 .page_dot_value
 {
-  height: 17px;
-  width: 17px;
-  margin-top: 55px;
-  border-radius: 50%;
-  box-shadow: 
-  0 1px 1px rgba(255, 80, 80, 0.965), 
-  0 1px 0px rgba(242, 18, 14, 0.967), 
-  0 2px 0px rgba(223, 238, 7, 0.929), 
-  0 2px 2px rgba(222, 10, 10, 0.926), 
-  0 5px 5px rgb(101, 142, 31);
-  background-color: white;
-  cursor: pointer;
+    height: 18px;
+    width: 18px;
+    margin-top: 55px;
+    border-radius: 50%;
+    box-shadow: 
+    0 1px 1px rgba(255, 80, 80, 0.965), 
+    0 1px 0px rgba(242, 18, 14, 0.967), 
+    0 2px 0px rgba(223, 238, 7, 0.929), 
+    0 2px 2px rgba(222, 10, 10, 0.926), 
+    0 5px 5px rgb(101, 142, 31);
+    background-color: white;
+    cursor: pointer;
 }
 .block_size_mid
 {
@@ -143,7 +158,7 @@ main{
 }
 .color_highlight
 {
-    color: rgb(114, 221, 120);
+    color: rgb(144, 173, 189);
 }
 
 
@@ -173,6 +188,7 @@ main{
     .year_active,
     .status {
         margin: 5px 0;
+
     }
 }
 
