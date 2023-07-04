@@ -124,6 +124,15 @@ h1, h2, p, h3{
       left: 105vw;
     }
   }
+  #basic_img_wrap
+  {
+      width: 180px;
+      height: 180px;
+  }
+  .icon_div_wrap
+  {
+    width: 8%;
+  }
   .title_name
   {
     font-family: 'Verdana';
@@ -161,9 +170,13 @@ h1, h2, p, h3{
    
 }
 .social_media_icon img{
-  width: 18px;
-    height: 18px;
+  width: 17px;
+    height: 17px;
     padding: 5px;
+}
+.icon_div_wrap
+{
+  width: 10%;
 }
   }
 /* 
