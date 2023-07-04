@@ -83,3 +83,21 @@ h1{
 .info-link i {
     margin-right: 10px;
 }
+@media (min-width: 600px) and (max-width: 1200px) {
+
+    .info-link {
+    
+    
+        min-height: 20px;
+        min-width: 300px;
+        font-size: 14px;
+    
+    }
+
+    h1{
+   
+        font-size: 20px;
+        margin-bottom: 50px;
+        margin-top: 40px;
+    }
+}

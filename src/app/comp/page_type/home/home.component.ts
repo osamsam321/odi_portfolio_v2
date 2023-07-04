@@ -15,23 +15,22 @@ export class HomeComponent implements OnInit, OnDestroy {
   ngOnInit() {
     console.log("inside of home ngInit");
     // Get a reference to the sky element
-    let random_time_milli = (Math.random() * 5000) + 5000;
-    this.subscription = interval(random_time_milli).subscribe(val => this.createPlanesTask(1));
+    // uncomment for the suprise
+    // let random_time_milli = (Math.random() * 5000) + 5000;
+    // this.subscription = interval(random_time_milli).subscribe(val => this.createPlanesTask(1));
     
 }
 
 ngOnDestroy() {
-  this.subscription.unsubscribe();
+  // uncomment for the suprise
+  // this.subscription.unsubscribe();
 }
   
 
  render_arials() {
   const sky = this.elRef.nativeElement.querySelector('.sky');
 
-  // Define an array of plane images to use
-  // const planeImages = ['../../../../assets/img/home_img/icons8-plane-50.png', '../../../../assets/img/home_img/icons8-ufo-67.png', '../../../../assets/img/home_img/icons8-jet-64.png'];
     const planeImages = ['../../../../assets/img/home_img/icons8-ufo-67.png'];
-   // Define a function to create a new plane element
    
     // Choose a random plane image from the array
     const planeImage = planeImages[Math.floor(Math.random() * planeImages.length)];
@@ -59,14 +58,6 @@ ngOnDestroy() {
 
     // Add the plane to the sky element
     this.renderer.appendChild(sky, plane);
-  
-
-  // Define a function to create a specified number of planes
- 
-
-  // Call the createPlanes function with a random number of planes (1-2)
-
-  // Function with delay
 
 
 }

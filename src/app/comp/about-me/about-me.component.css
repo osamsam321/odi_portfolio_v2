@@ -1,5 +1,10 @@
+@font-face {
+  font-family: 'Open Sans_med';
+  src: url('/src/assets/fonts/Open_Sans/static/OpenSans-Medium.ttf') format('truetype');
+  font-weight: 800; /* Extra bold */
+  font-style: normal;
+}
 
-  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Lato&family=Nunito:wght@200&family=Open+Sans:wght@300;500&family=Roboto:wght@100&family=Work+Sans&display=swap');
 
 .title-container {
   text-align: center;
@@ -24,7 +29,7 @@
   font-size: 20px;
   text-indent: 5%;
   line-height: 2.5;
-  font-family: 'Open Sans';
+  font-family: 'Open Sans_med';
 
 
 }
@@ -79,13 +84,13 @@ section{
   }
   
   .section-description {
-    font-size: 18px;
+    font-size: 1.2rem ;
     margin-bottom: 15px;
     margin-top: 0px;
     line-height: 50px;
-    font-family: 'Open Sans';
+    font-family: 'Open Sans_med';
     letter-spacing: 1px;
-    color: rgb(224, 222, 222);
+    color: rgb(235, 235, 235);
   }
   h1,p{
     color: white;
@@ -335,4 +340,114 @@ section{
 .hidden
 {
   display: none;
+}
+
+
+/* Small screens */
+@media (max-width: 600px) {
+  .project-box {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .project-image {
+      width: 100%;
+      height: auto;
+  }
+
+  .col_flex_cont {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .project-link,
+  .year_active,
+  .status {
+      margin: 5px 0;
+
+  }
+}
+
+/* Medium screens */
+@media (min-width: 600px) and (max-width: 1200px) {
+  .project-box {
+      width: 50%;
+      display: flex;
+      flex-direction: row;
+      align-items: start;
+  }
+  .skills_box_title
+  {
+    font-size: 18px;
+    pointer-events: none;
+  }
+  .project-image {
+      width: 50%;
+      height: auto;
+  }
+
+  .col_flex_cont {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+  }
+
+  .project-link,
+  .year_active,
+  .status {
+      margin: 5px 0;
+  }
+
+  #page_dot_value_cont
+{
+
+  width: 25px;
+  height: 100px;
+  
+}
+.page_dot_value
+{
+  height: 13px;
+  width: 13px;
+}
+
+.section-description {
+  font-size: .85rem;
+  margin-bottom: 15px;
+  margin-top: 0px;
+  line-height: 31px;
+  font-family: 'Open Sans_med';
+  letter-spacing: .8px;
+  color: rgb(235, 235, 235);
+}
+
+.container {
+  max-width: 600px;
+ 
+}
+
+.title {
+  font-size: 20px;
+ 
+}
+.skills_cont_img
+{
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+
+}
+.skills_box_title
+  {
+    font-size: 16px;
+    pointer-events: none;
+  }
+  #dunbar_consulting_title
+{
+  margin-bottom: 40px;
+  font-size: 15px;
+}
 }
