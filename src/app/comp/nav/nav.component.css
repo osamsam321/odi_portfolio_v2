@@ -7,6 +7,8 @@
     bottom: 0;
     width: 100%;
     box-sizing: border-box;
+    display: flex;
+    justify-content: center;
 }
 
 nav
@@ -39,14 +41,14 @@ a:hover
 .nav-container {
     display: flex;
     justify-content: center;
+    justify-content: space-around;
   }
-  
+
   .nav-container, a {
-    margin: 0 10px;
     color: rgb(185, 185, 185);
     text-decoration: none;
   }
-  
+
    a:focus{
     color: red;
     text-decoration: none;
@@ -57,5 +59,54 @@ a:hover
     color: red;
   }
 
- 
-  
+/* Small devices (phones, 0px to 599px) */
+@media only screen and (max-width: 599px) {
+  a{
+    font-size: 13.5px;
+  }
+  .nav-container{
+    width:400px;
+  }
+}
+
+/* Medium devices (small tablets, 600px to 899px) */
+@media only screen and (min-width: 600px) and (max-width: 899px) {
+  a{
+    font-size: 16px;
+  }
+  .nav-container{
+    width:550px;
+  }
+}
+
+/* Large devices (tablets, 900px to 1199px) */
+@media only screen and (min-width: 900px) and (max-width: 1199px) {
+  a{
+    font-size: 16.5px;
+  }
+  .nav-container{
+    width:700px;
+  }
+}
+
+/* Extra-large devices (small laptops, 1200px to 1799px) */
+@media only screen and (min-width: 1200px) and (max-width: 1799px) {
+  a{
+    font-size: 17px;
+  }
+  .nav-container{
+    width:900px;
+  }
+}
+
+/* Extra-extra-large devices (large laptops and desktops, 1800px and above) */
+@media only screen and (min-width: 1800px) {
+  a{
+    font-size: 18.5px;
+  }
+  .nav-container{
+    width:1200px;
+  }
+}
+
+

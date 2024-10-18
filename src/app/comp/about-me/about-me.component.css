@@ -1,5 +1,4 @@
 
-  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Lato&family=Nunito:wght@200&family=Open+Sans:wght@300;500&family=Roboto:wght@100&family=Work+Sans&display=swap');
 
 .title-container {
   text-align: center;
@@ -44,11 +43,11 @@ main{
   width: 100%;
   height: 100%;
   background-color: black;
-  background-image: url('../../../assets/img/home_img/blue-mountain-vugxyc127quhpdj_walpaper.jpg');
+  background-image: url('../../../assets/img/home_img/blue-mountain-1-tinypng_optimization.jpg');
   background-size: cover;
   background-repeat: no-repeat ;
   background-color: rgba(0, 0, 0, 0.2);
-  overflow-y: hidden; 
+  overflow-y: hidden;
 }
 
 section{
@@ -58,34 +57,39 @@ section{
 .about-me {
     padding: 80px 0;
   }
-  
+
   .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
-    animation: fadeIn .3s ease-in-out; 
+    animation: fadeIn .3s ease-in-out;
 
   }
-  
+
   .profile-pic {
     max-width: 100%;
     border-radius: 50%;
   }
-  
+
   .section-title {
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 20px;
   }
-  
+
   .section-description {
     font-size: 18px;
     margin-bottom: 15px;
-    margin-top: 0px;
+    margin-top: 50px;
+    border-radius: 20px;
     line-height: 50px;
-    font-family: 'Open Sans';
+    font-family: "Poppins";
     letter-spacing: 1px;
-    color: rgb(224, 222, 222);
+    color: rgb(240, 240, 240);
+    position: static;
+  }
+  .reader_background{
+    position: static;
   }
   h1,p{
     color: white;
@@ -93,7 +97,7 @@ section{
 
   .title
   {
-    
+
     margin-bottom: 5%;
     width: 100%;
   }
@@ -114,13 +118,13 @@ section{
     border: 2px solid #2980b9; /* Border color */
     border-radius: 10px; /* Border radius for rounded corners */
     box-shadow: 0 0 10px rgba(255, 52, 52, 0.5); /* Box shadow */
-    justify-content: space-between; 
+    justify-content: space-between;
     transition: all 0.3s ease-in-out;
-    align-items: center;   
+    align-items: center;
     color: #333; /* Text color */
-    animation: fadeIn .3s ease-in-out; 
+    animation: fadeIn .3s ease-in-out;
 
-    
+
   }
 
 
@@ -244,7 +248,7 @@ section{
 #move_down_arrow:hover
 {
  background-color: red;
-  
+
 }
 .skills_cont_img_wrap
 {
@@ -318,11 +322,11 @@ section{
   width: 18px;
   margin-top: 55px;
   border-radius: 50%;
-  box-shadow: 
-  0 1px 1px rgba(255, 80, 80, 0.965), 
-  0 1px 0px rgba(242, 18, 14, 0.967), 
-  0 2px 0px rgba(223, 238, 7, 0.929), 
-  0 2px 2px rgba(222, 10, 10, 0.926), 
+  box-shadow:
+  0 1px 1px rgba(255, 80, 80, 0.965),
+  0 1px 0px rgba(242, 18, 14, 0.967),
+  0 2px 0px rgba(223, 238, 7, 0.929),
+  0 2px 2px rgba(222, 10, 10, 0.926),
   0 5px 5px rgb(101, 142, 31);
   background-color: white;
   cursor: pointer;

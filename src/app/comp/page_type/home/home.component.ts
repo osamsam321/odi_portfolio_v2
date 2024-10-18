@@ -15,13 +15,16 @@ export class HomeComponent implements OnInit, OnDestroy {
   ngOnInit() {
     console.log("inside of home ngInit");
     // Get a reference to the sky element
-    let random_time_milli = (Math.random() * 5000) + 5000;
-    this.subscription = interval(random_time_milli).subscribe(val => this.createPlanesTask(1));
+
+    // uncomment to start the suprise 
+    // let random_time_milli = (Math.random() * 5000) + 5000;
+    // this.subscription = interval(random_time_milli).subscribe(val => this.createPlanesTask(1));
     
 }
 
 ngOnDestroy() {
-  this.subscription.unsubscribe();
+   // uncomment to start the suprise 
+  // this.subscription.unsubscribe();
 }
   
 

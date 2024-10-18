@@ -1,16 +1,14 @@
 
-
 main
 {
-    
+
     width: 100%;
     height: 100%;
     background-color: black;
-    background-image: url('../../../../assets/img/home_img/blue-mountain-vugxyc127quhpdj_walpaper.jpg');
+    background-image: url('../../../../assets/img/home_img/blue-mountain-1-tinypng_optimization.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-color: rgba(0, 0, 0, 0.2);
- 
 }
 /* animation: fadeIn .7s ease-in-out; */
 
@@ -22,6 +20,9 @@ main
 h1
 {
     font-size: 80px;
+}
+h2{
+  font-size:24px
 }
 p{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -39,8 +40,17 @@ h1, h2, p, h3{
 }
 .basic_div_wrap
 {
-  animation: fadeIn .7s ease-in-out; 
-
+  animation: fadeIn .7s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+#social_media_icon_container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
 }
 #basic_img_wrap
 {
@@ -49,18 +59,15 @@ h1, h2, p, h3{
 }
 .social_media_icon
 {
-    width: 25px;
-    height: 25px;
-    padding: 5px;
-    border-radius: 5px;
     background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.social_media_icon img{
-  width: 25px;
-    height: 25px;
+.social_media_icon, .social_media_icon img{
+    border-radius: .5rem;
+    width: 1.7rem;
+    height: 1.7rem;
     padding: 5px;
 }
 
@@ -106,7 +113,7 @@ h1, h2, p, h3{
     animation: move_arial_right 8s linear infinite;
 
   }
-  
+
   @keyframes move_arial_left {
     from {
       left: 105vw;
@@ -126,7 +133,16 @@ h1, h2, p, h3{
   }
   .title_name
   {
-    font-family: 'Verdana';
+    font-family: 'Poppins';
+    font-weight: 500;
+  }
+  h1{
+    font-weight: 500;
+    font-stretch: expanded;
+  }
+  h2{
+    font-family: 'Poppins';
+    font-weight: 500;
   }
   .small_phrase
   {
@@ -135,22 +151,22 @@ h1, h2, p, h3{
     color: rgb(255, 255, 250);
     font-family: Arial, Helvetica, sans-serif;
   }
-  
-/* 
+
+/*
 /* shooting start style */
-/* 
+/*
 .shooting-star {
     position: absolute;
     left: -50px;
     top: 50px;
     animation: shooting-star 10s linear infinite;
   }
-  
+
   .star {
     position: absolute;
     width: 50px;
     height: 50px;
-   
+
     border-bottom: 20px solid transparent;
     transform: rotate(-25deg);
     background-color: transparent;
@@ -161,7 +177,7 @@ h1, h2, p, h3{
   {
     background-color: transparent;
   }
-  
+
   .trail {
     position: absolute;
     width: 40px;
@@ -171,7 +187,7 @@ h1, h2, p, h3{
     opacity: 0;
     animation: trail 5s linear infinite;
   }
-  
+
   @keyframes shooting-star {
     0% {
       transform: translate(0, 0) rotate(45deg);
@@ -180,7 +196,7 @@ h1, h2, p, h3{
       transform: translate(100vw, 0vh) rotate(45deg);
     }
   }
-  
+
   @keyframes trail {
     0% {
       opacity: 1;
@@ -192,3 +208,180 @@ h1, h2, p, h3{
     }
   }
     */
+
+
+/* Small devices (phones, 0px to 599px) */
+@media only screen and (max-width: 599px) {
+    h1 {
+        font-size: 40px;
+    }
+    h2{
+      font-size: 14px;
+    }
+    p {
+        font-size: 14px;
+    }
+    #basic_img_wrap {
+        width: 120px;
+        height: 120px;
+    }
+    #odi_icon_img {
+        width: 80%;
+        height: auto;
+        border-radius: 100px;
+    }
+    .small_phrase {
+        font-size: 14px;
+    }
+.social_media_icon, .social_media_icon img{
+        width: 1.4rem;
+        height: 1.4rem;
+        padding: 4px;
+    }
+    #social_media_icon_container{
+      width: 140px;
+      margin-top:20px;
+    }
+    #secondary_title{
+      margin-top: 30px;
+    }
+}
+
+/* Medium devices (small tablets, 600px to 899px) */
+@media only screen and (min-width: 600px) and (max-width: 899px) {
+    h1 {
+        font-size: 50px;
+    }
+    h2{
+      font-size: 18.5px;
+    }
+    p {
+        font-size: 18px;
+    }
+    #basic_img_wrap {
+        width: 145px;
+        height: 145px;
+    }
+    #odi_icon_img {
+        width: 90%;
+        height: auto;
+        border-radius: 100px;
+    }
+.social_media_icon, .social_media_icon img{
+        width: 1.7rem;
+        height: 1.7rem;
+        padding: 4.5px;
+    }
+    #social_media_icon_container{
+      width: 170px;
+      margin-top: 25px;
+    }
+    #secondary_title{
+      margin-top: 38px;
+    }
+}
+
+/* Large devices (tablets, 900px to 1199px) */
+@media only screen and (min-width: 900px) and (max-width: 1199px) {
+    h1 {
+        font-size: 60px;
+    }
+    h2{
+      font-size: 24px;
+    }
+    p {
+        font-size: 19px;
+    }
+    #basic_img_wrap {
+        width: 170px;
+        height: 170px;
+    }
+    #odi_icon_img {
+        width: 95%;
+        height: auto;
+        border-radius: 100px;
+    }
+.social_media_icon, .social_media_icon img{
+        width: 2rem;
+        height: 2rem;
+        padding: 5px;
+    }
+    #social_media_icon_container{
+      width: 200px;
+      margin-top: 30px;
+    }
+    #secondary_title{
+      margin-top: 45px;
+    }
+}
+
+/* Extra-large devices (small laptops, 1200px to 1799px) */
+@media only screen and (min-width: 1200px) and (max-width: 1799px) {
+    h1 {
+        font-size: 70px;
+    }
+    h2 {
+        font-size: 22px;
+    }
+    p {
+        font-size: 20px;
+    }
+    #basic_img_wrap {
+        width: 195px;
+        height: 195px;
+    }
+    #odi_icon_img {
+        width: 100%;
+        height: auto;
+        border-radius: 100px;
+    }
+.social_media_icon, .social_media_icon img{
+        width: 2rem;
+        height: 2rem;
+        padding: 5.5px;
+    }
+    #social_media_icon_container{
+      width: 240px;
+      margin-top: 35px;
+    }
+    #secondary_title{
+      margin-top: 50px;
+    }
+}
+
+/* Extra-extra-large devices (large laptops and desktops, 1800px and above) */
+@media only screen and (min-width: 1800px) {
+    h1 {
+        font-size: 80px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    p {
+        font-size: 22px;
+    }
+    #basic_img_wrap {
+        width: 230px;
+        height: 230px;
+    }
+    #odi_icon_img {
+        width: 100%;
+        border-radius: 120px;
+        height: auto;
+    }
+    #social_media_icon_container{
+      width: 240px;
+    }
+.social_media_icon, .social_media_icon img{
+        width: 2rem;
+        height: 2rem;
+        padding: 6px;
+    }
+    #social_media_icon_container{
+      width: 270px;
+      margin-top: 40px;
+    }
+    #secondary_title{
+      margin-top: 55px;
+    }
+}
