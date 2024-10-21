@@ -2,3 +2,36 @@ body
 {
     overflow-x: hidden;
 }
+#parent_wrap {
+    width: 100%; /* Full width */
+    background-image: url('../assets/img/home_img/blue-mountain-1-tinypng_optimization.jpg');
+    background-size: cover; /* Ensures the image covers the entire element */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-color: rgba(0, 0, 0, 0.2); /* Optional: overlay effect */
+}
+
+/* #parent_wrap{
+    background-color: black;
+    background-image: url('../assets/img/home_img/blue-mountain-1-tinypng_optimization.jpg');
+    background-size:cover;
+    height:100vh;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.2);
+} */
+#nav_wrapper{
+  height:100px;
+  width:100%;
+  z-index:-1;
+}
+@media only screen and (max-height: 800px) {
+  #parent_wrap{
+  }
+  /*.social_media_wrapper{
+    margin-bottom: 70px;
+    margin-top: 50px;
+  }
+  main{
+    height: 150vh;
+  } */
+
+}

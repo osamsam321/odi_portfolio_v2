@@ -1,6 +1,6 @@
 #parent_nav_element
 {
-    padding: 17px;
+    padding:17px;
     overflow: hidden;
     background-color: #242323;
     position: fixed;
@@ -8,6 +8,7 @@
     width: 100%;
     box-sizing: border-box;
     display: flex;
+    align-items: center;
     justify-content: center;
 }
 
@@ -67,6 +68,10 @@ a:hover
   .nav-container{
     width:400px;
   }
+  #parent_nav_element
+  {
+    padding:13px;
+  }
 }
 
 /* Medium devices (small tablets, 600px to 899px) */
@@ -76,6 +81,10 @@ a:hover
   }
   .nav-container{
     width:550px;
+  }
+  #parent_nav_element
+  {
+    padding:14px;
   }
 }
 
@@ -87,6 +96,10 @@ a:hover
   .nav-container{
     width:700px;
   }
+  #parent_nav_element
+  {
+    padding:15px;
+  }
 }
 
 /* Extra-large devices (small laptops, 1200px to 1799px) */
@@ -97,6 +110,10 @@ a:hover
   .nav-container{
     width:900px;
   }
+  #parent_nav_element
+  {
+    padding:16px;
+  }
 }
 
 /* Extra-extra-large devices (large laptops and desktops, 1800px and above) */
@@ -106,6 +123,10 @@ a:hover
   }
   .nav-container{
     width:1200px;
+  }
+  #parent_nav_element
+  {
+    padding:17px;
   }
 }
 

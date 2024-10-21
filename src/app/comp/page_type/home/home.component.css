@@ -1,34 +1,24 @@
 
 main
 {
-
     width: 100%;
-    height: 100%;
-    background-color: black;
-    background-image: url('../../../../assets/img/home_img/blue-mountain-1-tinypng_optimization.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: rgba(0, 0, 0, 0.2);
+    min-height: 100%;
 }
 /* animation: fadeIn .7s ease-in-out; */
+
 
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
-h1
-{
-    font-size: 80px;
-}
-h2{
-  font-size:24px
-}
 p{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 h1, h2, p, h3{
-    color: rgb(207, 204, 204);
+    color: rgb(240, 240, 240);
+    letter-spacing: 2.2px;
+    text-shadow: rgba(0, 0, 0, .3);
 }
 #odi_icon_img
 {
@@ -131,18 +121,15 @@ h1, h2, p, h3{
       left: 105vw;
     }
   }
-  .title_name
-  {
-    font-family: 'Poppins';
-    font-weight: 500;
-  }
   h1{
     font-weight: 500;
-    font-stretch: expanded;
+    font-stretch:ultra-expanded;
+    font-family: 'Poppins', sans-serif;
+    margin:0px;
   }
   h2{
-    font-family: 'Poppins';
-    font-weight: 500;
+    font-family: Roboto;
+    font-weight: 400;
   }
   .small_phrase
   {
@@ -209,14 +196,28 @@ h1, h2, p, h3{
   }
     */
 
+/* add extra margin for width phone or tablet screen */
+@media only screen and (max-height: 800px) and (min-width: 400px) {
+  .social_media_wrapper{
+    margin-bottom: 70px;
+    margin-top: 20px;
+  }
+    .main_title{
+      margin-top:70px !important;
+    }
+
+}
 
 /* Small devices (phones, 0px to 599px) */
 @media only screen and (max-width: 599px) {
-    h1 {
-        font-size: 40px;
+    .main_title{
+      margin-top:58%;
+    }
+    h1{
+      font-size: 35px;
     }
     h2{
-      font-size: 14px;
+      font-size: 12px;
     }
     p {
         font-size: 14px;
@@ -240,20 +241,23 @@ h1, h2, p, h3{
     }
     #social_media_icon_container{
       width: 140px;
-      margin-top:20px;
+      margin-top:40px;
     }
     #secondary_title{
-      margin-top: 30px;
+      margin-top: 13px;
     }
 }
 
 /* Medium devices (small tablets, 600px to 899px) */
 @media only screen and (min-width: 600px) and (max-width: 899px) {
-    h1 {
-        font-size: 50px;
+    .main_title{
+      margin-top:40%;
+    }
+    h1{
+      font-size: 55px;
     }
     h2{
-      font-size: 18.5px;
+      font-size: 13px;
     }
     p {
         font-size: 18px;
@@ -274,20 +278,23 @@ h1, h2, p, h3{
     }
     #social_media_icon_container{
       width: 170px;
-      margin-top: 25px;
+      margin-top: 50px;
     }
     #secondary_title{
-      margin-top: 38px;
+      margin-top: 16px;
     }
 }
 
 /* Large devices (tablets, 900px to 1199px) */
 @media only screen and (min-width: 900px) and (max-width: 1199px) {
-    h1 {
-        font-size: 60px;
+    .main_title{
+      margin-top:26%;
+    }
+    h1{
+      font-size: 80px;
     }
     h2{
-      font-size: 24px;
+      font-size: 15px;
     }
     p {
         font-size: 19px;
@@ -302,26 +309,29 @@ h1, h2, p, h3{
         border-radius: 100px;
     }
 .social_media_icon, .social_media_icon img{
-        width: 2rem;
-        height: 2rem;
+        width: 1.6rem;
+        height: 1.7rem;
         padding: 5px;
     }
     #social_media_icon_container{
       width: 200px;
-      margin-top: 30px;
+      margin-top: 60px;
     }
     #secondary_title{
-      margin-top: 45px;
+      margin-top: 19px;
     }
 }
 
 /* Extra-large devices (small laptops, 1200px to 1799px) */
 @media only screen and (min-width: 1200px) and (max-width: 1799px) {
-    h1 {
-        font-size: 70px;
+    .main_title{
+      margin-top: 20%;
     }
-    h2 {
-        font-size: 22px;
+    h1{
+      font-size:100px;
+    }
+    h2{
+      font-size:20px;
     }
     p {
         font-size: 20px;
@@ -336,26 +346,29 @@ h1, h2, p, h3{
         border-radius: 100px;
     }
 .social_media_icon, .social_media_icon img{
-        width: 2rem;
-        height: 2rem;
+        width: 1.7rem;
+        height: 1.7rem;
         padding: 5.5px;
     }
     #social_media_icon_container{
       width: 240px;
-      margin-top: 35px;
+      margin-top:70px;
     }
     #secondary_title{
-      margin-top: 50px;
+      margin-top: 22px;
     }
 }
 
 /* Extra-extra-large devices (large laptops and desktops, 1800px and above) */
 @media only screen and (min-width: 1800px) {
-    h1 {
-        font-size: 80px;
+    .main_title{
+      margin-top: 14.5%;
     }
-    h2 {
-        font-size: 24px;
+    h1{
+      font-size:105px;
+    }
+    h2{
+      font-size:23px;
     }
     p {
         font-size: 22px;
@@ -373,15 +386,15 @@ h1, h2, p, h3{
       width: 240px;
     }
 .social_media_icon, .social_media_icon img{
-        width: 2rem;
-        height: 2rem;
+        width: 1.8rem;
+        height: 1.8rem;
         padding: 6px;
     }
     #social_media_icon_container{
       width: 270px;
-      margin-top: 40px;
+      margin-top: 80px;
     }
     #secondary_title{
-      margin-top: 55px;
+      margin-top: 24px;
     }
 }
