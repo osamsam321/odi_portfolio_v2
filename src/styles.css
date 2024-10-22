@@ -1,5 +1,117 @@
 /* You can add global styles to this file, and also import other style files */
 body{
-    margin: 0px;
     overflow-x: hidden;
+    margin: 0px;
+    overflow-y: scroll;
 }
+/* src/styles.css or src/styles.scss */
+html {
+
+}
+
+  /* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: #000000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ff6937;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #cc7777;
+}
+
+
+
+
+@media only screen and (max-width: 599px) {
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px black;
+    border-radius: 2px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 899px) {
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px black;
+    border-radius: 2px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+  }
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1199px) {
+  ::-webkit-scrollbar {
+    width: 14px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px black;
+    border-radius: 2px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1799px) {
+  ::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px black;
+    border-radius: 2px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  ::-webkit-scrollbar {
+    width: 18px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px black;
+    border-radius: 2px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+  }
+
+}
+
+

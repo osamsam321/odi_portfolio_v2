@@ -9,6 +9,7 @@ section{
 }
 h1{
   font-size: 40px;
+  margin-top: 70px;
 }
 h2 {
   margin-bottom: 10px;
@@ -51,6 +52,9 @@ a {
 a:hover {
   text-decoration: underline;
 }
+#github_link a {
+  color:#eebb44 !important;
+}
 
 .title-container {
   text-align: left;
@@ -82,7 +86,7 @@ a:hover {
     padding: 80px 0;
   }
 
-  .container {
+  .main_container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
@@ -115,7 +119,6 @@ a:hover {
   .content_container{
     display: flex;
     justify-content: left;
-    align-items: center;
     flex-direction: column;
 
   }
@@ -178,7 +181,7 @@ a:hover {
 .skills {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 15px;
 }
 
 .skill {
@@ -210,6 +213,22 @@ a:hover {
     border-radius: 2px;
     font-size: 11px;
   }
+  .skills{
+    margin-top:60px;
+    gap: 10px;
+  }
+  .last_section{
+    padding-bottom: 140px !important;
+  }
+  .main_container{
+    max-width:300px
+  }
+  .extra_top_space_margin{
+    margin-top: 80px;
+  }
+  .section-description{
+    margin-top: 40px;
+  }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 899px) {
@@ -229,9 +248,25 @@ a:hover {
   }
   .skill{
     border: .8px solid #3c3f45; /* Border to separate each skill */
-    padding: 8px 16px;
+    padding: 7px 15px;
     border-radius: 2.5px;
     font-size: 11px;
+  }
+  .skills{
+    margin-top:70px;
+    gap: 12px;
+  }
+  .last_section{
+    padding-bottom: 170px !important;
+  }
+  .main_container{
+    max-width:600px
+  }
+  .extra_top_space_margin{
+    margin-top: 100px;
+  }
+  .section-description{
+    margin-top: 50px;
   }
 }
 
@@ -256,6 +291,22 @@ a:hover {
     border-radius: 3px;
     font-size: 12px;
   }
+  .skills{
+    margin-top:80px;
+    gap: 13px;
+  }
+  .last_section{
+    padding-bottom: 200px !important;
+  }
+  .main_container{
+    max-width:800px
+  }
+  .extra_top_space_margin{
+    margin-top: 120px;
+  }
+  .section-description{
+    margin-top: 60px;
+  }
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1799px) {
@@ -279,6 +330,22 @@ a:hover {
     border-radius: 4px;
     font-size: 14px;
   }
+  .skills{
+    margin-top:90px;
+    gap: 14px;
+  }
+  .last_section{
+    padding-bottom: 230px !important;
+  }
+  .main_container{
+    max-width:1000px
+  }
+  .extra_top_space_margin{
+    margin-top: 140px;
+  }
+  .section-description{
+    margin-top: 70px;
+  }
 }
 
 @media only screen and (min-width: 1800px) {
@@ -286,7 +353,7 @@ a:hover {
     font-size: 18px;
   }
   h1{
-    font-size: 40px;
+    font-size: 37px;
   }
   h3{
     font-size:18px;
@@ -301,5 +368,21 @@ a:hover {
     padding: 12px 30px;
     border-radius: 4px;
     font-size: 14px;
+  }
+  .skills{
+    margin-top:100px;
+    gap: 15px;
+  }
+  .last_section{
+    padding-bottom: 250px !important;
+  }
+  .main_container{
+    max-width:1200px
+  }
+  .extra_top_space_margin{
+    margin-top: 160px;
+  }
+  .section-description{
+    margin-top: 80px;
   }
 }
