@@ -112,6 +112,9 @@ img{
   fill: #bbdf11;
   border-radius: 50px;
 }
+.footer_space{
+  margin-bottom: 12%;
+}
 
 @media only screen and (max-width: 599px) {
   #project_section_main_container{
