@@ -11,24 +11,23 @@
     align-items: center;
     justify-content: center;
     z-index: 9999999;
-
 }
 
-nav
-{
-
-}
 h3, a{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: rgb(245, 255, 107);
+    font-family: Verdana, Roboto, Tahoma, sans-serif;
     cursor: pointer;
-    font-size: 18.5px;
     text-decoration: none;
 }
-a:hover
-{
-  color: rgb(251, 251, 182)!important;
+a:focus{
+  color: #fe1110;
+  text-decoration: none;
+  border: none;
+  outline: none;
 }
+.primary-default-color{
+  color: rgb(250,250,250);
+}
+
 #nav_logo
 {
     width: 100%;
@@ -45,22 +44,8 @@ a:hover
     display: flex;
     justify-content: center;
     justify-content: space-around;
-  }
+}
 
-  .nav-container, a {
-    color: rgb(185, 185, 185);
-    text-decoration: none;
-  }
-
-   a:focus{
-    color: red;
-    text-decoration: none;
-    border: none;
-    outline: none;
-  }
-  #home:focus{
-    color: red;
-  }
 
 /* Small devices (phones, 0px to 599px) */
 @media only screen and (max-width: 599px) {

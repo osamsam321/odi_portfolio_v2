@@ -46,9 +46,9 @@ const routes: Routes = [
     AppRoutingModule,
     FlexLayoutModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(routes) 
+    RouterModule.forRoot(routes)
   ],
-  
+
   providers: [],
   bootstrap: [AppComponent]
 })

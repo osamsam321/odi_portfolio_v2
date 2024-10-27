@@ -1,5 +1,5 @@
 import { Location } from '@angular/common';
-import { AfterViewInit, Component, ElementRef, HostListener, Injectable, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, Injectable, OnInit, Renderer2, ViewChild, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
 
@@ -9,7 +9,8 @@ import { filter } from 'rxjs';
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
-  styleUrls: ['./nav.component.css']
+  styleUrls: ['./nav.component.css'],
+  encapsulation: ViewEncapsulation.None, // Add this line
 })
 export class NavComponent implements OnInit, AfterViewInit	 {
 
@@ -24,83 +25,31 @@ export class NavComponent implements OnInit, AfterViewInit	 {
   @ViewChild('nav_projects_link', { static: false }) nav_projects_link_er!: ElementRef;
   @ViewChild('nav_about_me_link', { static: false }) nav_about_me_link_er!: ElementRef;
   @ViewChild('nav_misc_link', { static: false }) nav_misc_link_er!: ElementRef;
-
+  nav_link_index_selected:any;
   links_er!:ElementRef[];
 
   constructor(private r2: Renderer2, private el: ElementRef, private router: Router,
     private activated_route: ActivatedRoute, private location: Location) {}
   ngAfterViewInit(): void {
     this.prepare_nav();
-    this.links_er = [this.nav_home_link_er, this.nav_about_me_link_er, this.nav_projects_link_er, 
-       this.nav_misc_link_er]
-      this.focusLink(this.linkIndex);
+    this.links_er = [this.nav_home_link_er, this.nav_about_me_link_er, this.nav_projects_link_er,
+    this.nav_misc_link_er];
   }
   ngOnInit(): void {
     this.router.navigate([this.links[0]]);
-
   }
   prepare_nav()
   {
     this.router.events.subscribe((val) => {
       if(location.pathname != ''){
         this.route = location.pathname;
-        console.log("current router sir: " + this.route);
       } else {
         this.route = '/'
       }
     });
   }
-  
-  resetNavLinkStyle()
-  {
-    for(let nav_er of this.links_er )
-    {
-      this.r2.setStyle(nav_er.nativeElement, 'color', 'rgb(245,245,245)');
-    }
-  }
-  
-  focusLink(nav_index: number)
-  {
-    console.log("nav_value: " + nav_index);
-    // console.log(inputElement.id);
-    this.resetNavLinkStyle();
-     this.r2.setStyle(this.links_er[nav_index].nativeElement, 'color', 'red');
-  }
 
-  updateNav(nav_index: number)
-  {
-    this.linkIndex = nav_index;
-    this.focusLink(nav_index);
-  }
 
-  @HostListener('document:keydown', ['$event'])
-  onKeyDown(event: KeyboardEvent) {
-    
-    if (event.key === 'ArrowRight') {
-      console.log('Right arrow key now pressed');
-      // Handle right arrow key event
-      this.linkIndex = (this.linkIndex + 1) % this.links.length; // Increment linkindex by 1
-    } else if (event.key === 'ArrowLeft') {
-      console.log('Left arrow key now pressed');
-      // Handle left arrow key event
-      
-        this.linkIndex = (this.linkIndex <= 0)? this.links.length - 1: this.linkIndex - 1
-  
-    }
-    console.log('link index value {}', this.linkIndex);
-
-    this.router.navigate([this.links[this.linkIndex]]);
-    this.updateNav(this.linkIndex);
-
-  }
-
-  
-  // ngOnInit()
-  // {
-
-  // }
- 
- 
 }
 
 

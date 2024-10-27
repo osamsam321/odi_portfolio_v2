@@ -97,6 +97,13 @@ h1{
   width:25px;
   margin:0px 0px 0px 15px ;
 }
+/* add extra margin for width phone or tablet screen */
+@media only screen and (max-height: 800px) and (min-width: 400px) {
+  .main_content_container{
+    /* add the neccesary space for widescreen mobile device */
+    height: 200% !important;
+  }
+}
 
 @media only screen and (max-width: 599px) {
     h1{

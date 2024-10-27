@@ -31,7 +31,6 @@ h3{
 }
 p {
   margin-bottom: 50px;
-  color: #c5c5c5;
   line-height: 1.6;
   font-family: "Poppins";
   letter-spacing: 1px;
@@ -39,7 +38,7 @@ p {
   line-height: 50px;
   font-family: "Poppins";
   letter-spacing: 1px;
-  color: rgb(240, 240, 240);
+  color: #fafafa;
 }
 h1,p{
     color: white;
@@ -61,6 +60,15 @@ a:hover {
   margin-top: 5%;
   width: 100%;
 
+}
+.highlight_text_primary{
+  color:#fa3322;
+}
+.highlight_text_secondary{
+  color:#ffdd11;
+}
+.white_font{
+  color:white;
 }
 
 @keyframes fadeIn {
@@ -185,12 +193,13 @@ a:hover {
 }
 
 .skill {
+  color:white;
   background-color: #4c4f56; /* Slightly lighter than the background */
-  color: #f5f5f5;
   border: 1px solid #3c3f45; /* Border to separate each skill */
   padding: 12px 30px;
   border-radius: 4px;
   font-size: 14px;
+  font-family: Lato;
 }
 @media only screen and (max-width: 599px) {
   p {
@@ -221,10 +230,10 @@ a:hover {
     padding-bottom: 140px !important;
   }
   .main_container{
-    max-width:300px
+    max-width:325px;
   }
   .extra_top_space_margin{
-    margin-top: 80px;
+    margin-top: 73px;
   }
   .section-description{
     margin-top: 40px;

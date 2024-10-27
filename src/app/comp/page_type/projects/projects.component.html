@@ -1,318 +1,189 @@
-    
-    
-   <main>
-    <section [@openClose] = "current_page_val == 0? 'open': 'closed'" id = "about_me_section"  
-    #page_1 (@openClose.done)="onAnimationDone($event)" >
-    
-        <div class="project-box " tabindex="1">
-            <img class="project-image" src="../../../../assets/img/projects/Screenshot from 2023-06-27 02-08-48.png" alt="Project Image">
-            <div class=" tile_description_cont col_flex_cont  "> 
-                <h2 class="project-title font_style_1 color_highlight"> Shuroyo (Simple Wiki App) </h2>
-                <p class="project-description">
-                    This is a straightforward, user-friendly wiki application that allows users to upload and view application-related documents in various formats including PDF, Word, HTML, and Markdown.
+<div id="main_container" class="container_type">
+  <div id="content_container" class="container_type">
+    <div id="project_section_main_container" class="container_type">
 
+      <div class="container_type page_title_container"> <h1 id="page_title" class="title_font_family_1 default_font_color ">Projects</h1> </div>
 
-                </p>
+      <article>
+        <div class="project_box_root_container container_type">
+
+          <div class="container_type project_box_header_container">
+            <div class="container_type project_box_container_title">
+              <a href="https://github.com/osamsam321/odi_portfolio_v2" target="_blank"><h3 id="" class="default_font_color title_font_family_2 project_box_title_font"> Portfolio Version 2 </h3> </a>
             </div>
-            <div class="col_flex_cont font_style_1" > 
-                <a class="project-link" target="_blank"  href="https://github.com/osamsam321/SHUROYO">View on GitHub</a>
-                <h4 class="year_active"> Year: 2023 </h4>
-                <h4 class="status status_active_color"> Active </h4>
+            <div class="container_type project_box_app_links_container">
+              <a href="https://github.com/osamsam321/odi_portfolio_v2" target="_blank">
+                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="48px" height="48px" fill-rule="nonzero"><g  fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.33333,5.33333)"><path d="M24,4c-11.02793,0 -20,8.97207 -20,20c0,11.02793 8.97207,20 20,20c11.02793,0 20,-8.97207 20,-20c0,-11.02793 -8.97207,-20 -20,-20zM24,7c9.40662,0 17,7.59339 17,17c0,7.66536 -5.04306,14.12252 -12,16.25195v-5.11523c0,-1.91008 -1.10068,-3.5481 -2.69141,-4.36328c3.13805,-0.60035 5.72121,-2.3751 6.93703,-4.76606c1.21582,-2.39096 0.9149,-5.10432 -0.80812,-7.28668c0.44354,-1.36529 0.93902,-3.76003 -0.23828,-5.64453c-2.26987,0 -3.73455,1.55591 -4.43359,2.52344c-1.19501,-0.39258 -2.47379,-0.5962 -3.76562,-0.59961c-1.29267,0.00115 -2.5728,0.20278 -3.76953,0.59375c-0.70074,-0.96798 -2.16424,-2.51758 -4.42969,-2.51758c-1.35107,2.16264 -0.51586,4.48839 -0.06836,5.4375c-1.84039,2.17401 -2.23014,4.93209 -1.04286,7.37992c1.18727,2.44783 3.80041,4.27375 6.99208,4.88571c-1.30614,0.67319 -2.28436,1.89475 -2.58398,3.37695h-1.31445c-1.297,0 -1.80095,-0.52702 -2.50195,-1.41602c-0.692,-0.889 -1.43608,-1.48638 -2.33008,-1.73437c-0.482,-0.051 -0.80672,0.31563 -0.38672,0.64063c1.419,0.966 1.51694,2.54703 2.08594,3.58203c0.518,0.932 1.5793,1.77148 2.7793,1.77148h1.57031v3.25195c-6.95694,-2.12943 -12,-8.58659 -12,-16.25195c0,-9.40661 7.59339,-17 17,-17z"></path></g></g></svg>
+
+              </a>
+              <h4 class="default_font_family default_font_color ">2024</h4>
             </div>
+          </div>
+
+          <div class="container_type project_box_center_container">
+              <p class="default_font_color default_font_family project_description"> This is my secondary Portfolio application I've created using Angular as the framework of choice and built as a single page application.
+
+              </p>
+          </div>
+
+          <div class="container_type project_box_footer_container">
+            <div class="container_type project_box_tech_used_container">
+              <div class="tech_used_box tech_used_font">Angular</div>
+              <div class="tech_used_box tech_used_font">HTML</div>
+              <div class="tech_used_box tech_used_font">CSS</div>
+              <div class="tech_used_box tech_used_font">Typescript</div>
+              <div class="tech_used_box tech_used_font">Nginx</div>
+              <div class="tech_used_box tech_used_font">Git</div>
+            </div>
+          </div>
         </div>
-    
-        <div class="project-box" tabindex="2">
-            <img class="project-image" src="../../../../assets/img/projects/SQL_extrator_Net_Core.png" alt="Project Image">
-            <div class=" tile_description_cont col_flex_cont  "> 
-                <h2 class="project-title font_style_1 color_highlight"> SQL Query and Text builder </h2>
-                <p class="project-description">
-                    With this apps, users add an sql query into a textbox and a set of values they want to add into their query 
-                    like from spreadsheets or from files and select the settings they desire and finally copy the results. 
-                    This app uses .NET Winforms and C#  
+      </article>
 
-                </p>
-            </div>
-            <div class="col_flex_cont" > 
-                <a class="project-link" target="_blank" href="https://github.com/osamsam321/SqlData-Excel-Text-Extractor">View on GitHub</a>
-                <h4 class="year_active"> Year: 2022 </h4>
-                <h4 class="status status_active_color"> Active </h4>
-            </div>
-        </div>
-    
-        <div class="project-box" tabindex="3">
-            <img class="project-image" src="../../../../assets/img/projects/bbo_screanshot.png" alt="Project Image">
-            <div class=" tile_description_cont col_flex_cont  "> 
-                <h2 class="project-title font_style_1 color_highlight"> Text Extractor to SQL </h2>
-                <p class="project-description">
-                    This application, specifically designed to extract ID values from an Excel spreadsheet, is instrumental in set SQL queries for my professional tasks. It's been built using  Java, JavaFX, and Apache POI.
 
-                </p>
-            </div>
-            <div class="col_flex_cont" > 
-                <a class="project-link" target="_blank" href="https://github.com/osamsam321/BBO">View on GitHub</a>
-                <h4 class="year_active"> Year: 2022 </h4>
-                <h4 class="status status_not_active_color"> Not Active </h4>
-            </div>
-        </div>
-    
+      <article>
+        <div class="project_box_root_container container_type">
 
-    </section>
-    <section [@openClose] = "current_page_val == 1? 'open': 'closed'" id = "about_me_section"  
-    #page_2 (@openClose.done)="onAnimationDone($event)" >
-    
-    <div class="project-box" tabindex="4">
-        <img class="project-image" src="../../../../assets/img/projects/Screenshot from 2023-06-27 01-13-04.png" alt="Project Image">
-        <div class=" tile_description_cont col_flex_cont  "> 
-            <h2 class="project-title font_style_1 color_highlight"> First Portfolio Website </h2>
-            <p class="project-description">
-                This was my first portfolio site I built back in college. This app is using 
-                HTML, CSS and javascript.
+          <div class="container_type project_box_header_container">
+            <div class="container_type project_box_container_title">
+              <a href="https://github.com/osamsam321/sbot" target="_blank"><h3 id="" class="default_font_color title_font_family_2 project_box_title_font">Sbot</h3> </a>
+            </div>
+            <div class="container_type project_box_app_links_container">
+              <a href="https://github.com/osamsam321/odi_portfolio_v2" target="_blank">
+                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="48px" height="48px" fill-rule="nonzero"><g  fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.33333,5.33333)"><path d="M24,4c-11.02793,0 -20,8.97207 -20,20c0,11.02793 8.97207,20 20,20c11.02793,0 20,-8.97207 20,-20c0,-11.02793 -8.97207,-20 -20,-20zM24,7c9.40662,0 17,7.59339 17,17c0,7.66536 -5.04306,14.12252 -12,16.25195v-5.11523c0,-1.91008 -1.10068,-3.5481 -2.69141,-4.36328c3.13805,-0.60035 5.72121,-2.3751 6.93703,-4.76606c1.21582,-2.39096 0.9149,-5.10432 -0.80812,-7.28668c0.44354,-1.36529 0.93902,-3.76003 -0.23828,-5.64453c-2.26987,0 -3.73455,1.55591 -4.43359,2.52344c-1.19501,-0.39258 -2.47379,-0.5962 -3.76562,-0.59961c-1.29267,0.00115 -2.5728,0.20278 -3.76953,0.59375c-0.70074,-0.96798 -2.16424,-2.51758 -4.42969,-2.51758c-1.35107,2.16264 -0.51586,4.48839 -0.06836,5.4375c-1.84039,2.17401 -2.23014,4.93209 -1.04286,7.37992c1.18727,2.44783 3.80041,4.27375 6.99208,4.88571c-1.30614,0.67319 -2.28436,1.89475 -2.58398,3.37695h-1.31445c-1.297,0 -1.80095,-0.52702 -2.50195,-1.41602c-0.692,-0.889 -1.43608,-1.48638 -2.33008,-1.73437c-0.482,-0.051 -0.80672,0.31563 -0.38672,0.64063c1.419,0.966 1.51694,2.54703 2.08594,3.58203c0.518,0.932 1.5793,1.77148 2.7793,1.77148h1.57031v3.25195c-6.95694,-2.12943 -12,-8.58659 -12,-16.25195c0,-9.40661 7.59339,-17 17,-17z"></path></g></g></svg>
 
-            </p>
+              </a>
+              <h4 class="default_font_family default_font_color ">2024</h4>
+            </div>
+          </div>
+
+          <div class="container_type project_box_center_container">
+              <p class="default_font_color default_font_family project_description"> This a general purpose CLI tool used with openai api to query or run nix* shell commands with the gpt bot
+              </p>
+          </div>
+
+          <div class="container_type project_box_footer_container">
+            <div class="container_type project_box_tech_used_container">
+              <div class="tech_used_box tech_used_font">Go</div>
+              <div class="tech_used_box tech_used_font">Makefile</div>
+              <div class="tech_used_box tech_used_font">ChatGPT</div>
+              <div class="tech_used_box tech_used_font">*Nix</div>
+              <div class="tech_used_box tech_used_font">JSON</div>
+              <div class="tech_used_box tech_used_font">Git</div>
+            </div>
+          </div>
+
         </div>
-        <div class="col_flex_cont" > 
-            <a class="project-link" target="_blank" href="https://github.com/osamsam321/portfolio-personalSite">View on GitHub</a>
-            <h4 class="year_active"> Year: 2021 </h4>
-            <h4 class="status status_not_active_color"> Not Active </h4>
+      </article>
+
+
+      <article>
+        <div class="project_box_root_container container_type">
+
+          <div class="container_type project_box_header_container">
+            <div class="container_type project_box_container_title">
+              <a href="https://github.com/osamsam321/StagePlayer" target="_blank"><h3 id="" class="default_font_color title_font_family_2 project_box_title_font">Stage Player</h3> </a>
+            </div>
+            <div class="container_type project_box_app_links_container">
+              <a href="https://github.com/osamsam321/odi_portfolio_v2" target="_blank">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="48px" height="48px" fill-rule="nonzero"><g  fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.33333,5.33333)"><path d="M24,4c-11.02793,0 -20,8.97207 -20,20c0,11.02793 8.97207,20 20,20c11.02793,0 20,-8.97207 20,-20c0,-11.02793 -8.97207,-20 -20,-20zM24,7c9.40662,0 17,7.59339 17,17c0,7.66536 -5.04306,14.12252 -12,16.25195v-5.11523c0,-1.91008 -1.10068,-3.5481 -2.69141,-4.36328c3.13805,-0.60035 5.72121,-2.3751 6.93703,-4.76606c1.21582,-2.39096 0.9149,-5.10432 -0.80812,-7.28668c0.44354,-1.36529 0.93902,-3.76003 -0.23828,-5.64453c-2.26987,0 -3.73455,1.55591 -4.43359,2.52344c-1.19501,-0.39258 -2.47379,-0.5962 -3.76562,-0.59961c-1.29267,0.00115 -2.5728,0.20278 -3.76953,0.59375c-0.70074,-0.96798 -2.16424,-2.51758 -4.42969,-2.51758c-1.35107,2.16264 -0.51586,4.48839 -0.06836,5.4375c-1.84039,2.17401 -2.23014,4.93209 -1.04286,7.37992c1.18727,2.44783 3.80041,4.27375 6.99208,4.88571c-1.30614,0.67319 -2.28436,1.89475 -2.58398,3.37695h-1.31445c-1.297,0 -1.80095,-0.52702 -2.50195,-1.41602c-0.692,-0.889 -1.43608,-1.48638 -2.33008,-1.73437c-0.482,-0.051 -0.80672,0.31563 -0.38672,0.64063c1.419,0.966 1.51694,2.54703 2.08594,3.58203c0.518,0.932 1.5793,1.77148 2.7793,1.77148h1.57031v3.25195c-6.95694,-2.12943 -12,-8.58659 -12,-16.25195c0,-9.40661 7.59339,-17 17,-17z"></path></g></g></svg>
+              </a>
+              <h4 class="default_font_family default_font_color ">2024</h4>
+            </div>
+          </div>
+
+          <div class="container_type project_box_center_container">
+            <p class="default_font_color default_font_family project_description"> A minimal music player app built using React for the reactive front end, Express for auth control flow, spotify API for metadata and steaming, and nginx to server as the reverse proxy.
+
+              </p>
+          </div>
+
+          <div class="container_type project_box_footer_container">
+            <div class="container_type project_box_tech_used_container">
+              <div class="tech_used_box tech_used_font">React</div>
+              <div class="tech_used_box tech_used_font">Express</div>
+              <div class="tech_used_box tech_used_font">Typescript</div>
+              <div class="tech_used_box tech_used_font">NodeJS</div>
+              <div class="tech_used_box tech_used_font">Nginx</div>
+              <div class="tech_used_box tech_used_font">API</div>
+              <div class="tech_used_box tech_used_font">Git</div>
+            </div>
+          </div>
+
         </div>
+      </article>
+
+
+      <article>
+        <div class="project_box_root_container container_type">
+
+          <div class="container_type project_box_header_container">
+            <div class="container_type project_box_container_title">
+              <a href="https://github.com/osamsam321/StagePlayer" target="_blank"><h3 id="" class="default_font_color title_font_family_2 project_box_title_font">Stage Player</h3> </a>
+            </div>
+            <div class="container_type project_box_app_links_container">
+              <a href="https://github.com/osamsam321/odi_portfolio_v2" target="_blank">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="48px" height="48px" fill-rule="nonzero"><g  fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.33333,5.33333)"><path d="M24,4c-11.02793,0 -20,8.97207 -20,20c0,11.02793 8.97207,20 20,20c11.02793,0 20,-8.97207 20,-20c0,-11.02793 -8.97207,-20 -20,-20zM24,7c9.40662,0 17,7.59339 17,17c0,7.66536 -5.04306,14.12252 -12,16.25195v-5.11523c0,-1.91008 -1.10068,-3.5481 -2.69141,-4.36328c3.13805,-0.60035 5.72121,-2.3751 6.93703,-4.76606c1.21582,-2.39096 0.9149,-5.10432 -0.80812,-7.28668c0.44354,-1.36529 0.93902,-3.76003 -0.23828,-5.64453c-2.26987,0 -3.73455,1.55591 -4.43359,2.52344c-1.19501,-0.39258 -2.47379,-0.5962 -3.76562,-0.59961c-1.29267,0.00115 -2.5728,0.20278 -3.76953,0.59375c-0.70074,-0.96798 -2.16424,-2.51758 -4.42969,-2.51758c-1.35107,2.16264 -0.51586,4.48839 -0.06836,5.4375c-1.84039,2.17401 -2.23014,4.93209 -1.04286,7.37992c1.18727,2.44783 3.80041,4.27375 6.99208,4.88571c-1.30614,0.67319 -2.28436,1.89475 -2.58398,3.37695h-1.31445c-1.297,0 -1.80095,-0.52702 -2.50195,-1.41602c-0.692,-0.889 -1.43608,-1.48638 -2.33008,-1.73437c-0.482,-0.051 -0.80672,0.31563 -0.38672,0.64063c1.419,0.966 1.51694,2.54703 2.08594,3.58203c0.518,0.932 1.5793,1.77148 2.7793,1.77148h1.57031v3.25195c-6.95694,-2.12943 -12,-8.58659 -12,-16.25195c0,-9.40661 7.59339,-17 17,-17z"></path></g></g></svg>
+              </a>
+              <h4 class="default_font_family default_font_color ">2024</h4>
+            </div>
+          </div>
+
+          <div class="container_type project_box_center_container">
+            <p class="default_font_color default_font_family project_description"> A minimal music player app built using React for the reactive front end, Express for auth control flow, spotify API for metadata and steaming, and nginx to server as the reverse proxy.
+
+              </p>
+          </div>
+
+          <div class="container_type project_box_footer_container">
+            <div class="container_type project_box_tech_used_container">
+              <div class="tech_used_box tech_used_font">React</div>
+              <div class="tech_used_box tech_used_font">Express</div>
+              <div class="tech_used_box tech_used_font">Typescript</div>
+              <div class="tech_used_box tech_used_font">NodeJS</div>
+              <div class="tech_used_box tech_used_font">Nginx</div>
+              <div class="tech_used_box tech_used_font">API</div>
+              <div class="tech_used_box tech_used_font">Git</div>
+            </div>
+          </div>
+
+        </div>
+      </article>
+
+
+      <article>
+        <div class="project_box_root_container container_type">
+
+          <div class="container_type project_box_header_container">
+            <div class="container_type project_box_container_title">
+              <a href="https://github.com/osamsam321/SqlData-Excel-Text-Extractor" target="_blank"><h3 id="" class="default_font_color title_font_family_2 project_box_title_font">Excel Data to SQL Converter</h3> </a>
+            </div>
+            <div class="container_type project_box_app_links_container">
+              <a href="https://github.com/osamsam321/SqlData-Excel-Text-Extractor" target="_blank">
+                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="48px" height="48px" fill-rule="nonzero"><g  fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.33333,5.33333)"><path d="M24,4c-11.02793,0 -20,8.97207 -20,20c0,11.02793 8.97207,20 20,20c11.02793,0 20,-8.97207 20,-20c0,-11.02793 -8.97207,-20 -20,-20zM24,7c9.40662,0 17,7.59339 17,17c0,7.66536 -5.04306,14.12252 -12,16.25195v-5.11523c0,-1.91008 -1.10068,-3.5481 -2.69141,-4.36328c3.13805,-0.60035 5.72121,-2.3751 6.93703,-4.76606c1.21582,-2.39096 0.9149,-5.10432 -0.80812,-7.28668c0.44354,-1.36529 0.93902,-3.76003 -0.23828,-5.64453c-2.26987,0 -3.73455,1.55591 -4.43359,2.52344c-1.19501,-0.39258 -2.47379,-0.5962 -3.76562,-0.59961c-1.29267,0.00115 -2.5728,0.20278 -3.76953,0.59375c-0.70074,-0.96798 -2.16424,-2.51758 -4.42969,-2.51758c-1.35107,2.16264 -0.51586,4.48839 -0.06836,5.4375c-1.84039,2.17401 -2.23014,4.93209 -1.04286,7.37992c1.18727,2.44783 3.80041,4.27375 6.99208,4.88571c-1.30614,0.67319 -2.28436,1.89475 -2.58398,3.37695h-1.31445c-1.297,0 -1.80095,-0.52702 -2.50195,-1.41602c-0.692,-0.889 -1.43608,-1.48638 -2.33008,-1.73437c-0.482,-0.051 -0.80672,0.31563 -0.38672,0.64063c1.419,0.966 1.51694,2.54703 2.08594,3.58203c0.518,0.932 1.5793,1.77148 2.7793,1.77148h1.57031v3.25195c-6.95694,-2.12943 -12,-8.58659 -12,-16.25195c0,-9.40661 7.59339,-17 17,-17z"></path></g></g></svg>
+              </a>
+              <h4 class="default_font_family default_font_color ">2024</h4>
+            </div>
+          </div>
+
+          <div class="container_type project_box_center_container">
+            <p class="default_font_color default_font_family project_description"> This GUI app can be used to convert excel data into general SQL statements using the text/sql convertor options.
+
+              </p>
+          </div>
+
+          <div class="container_type project_box_footer_container">
+            <div class="container_type project_box_tech_used_container">
+              <div class="tech_used_box tech_used_font">C#</div>
+              <div class="tech_used_box tech_used_font">Windows Forms</div>
+              <div class="tech_used_box tech_used_font">GUI</div>
+              <div class="tech_used_box tech_used_font">Excel</div>
+              <div class="tech_used_box tech_used_font">SQL</div>
+            </div>
+          </div>
+
+        </div>
+      </article>
+
     </div>
-
-
-    <div class="project-box" tabindex="5">
-        <img class="project-image" src="../../../../assets/img/projects/Screenshot from 2023-06-27 02-00-40.png" alt="Project Image">
-        <div class=" tile_description_cont col_flex_cont  "> 
-            <h2 class="project-title font_style_1 color_highlight"> Tik Tac Toe </h2>
-            <p class="project-description">
-                This is A Tik Tac Toe game I built back in college using HTML, CSS and javascript.
-
-            </p>
-        </div>
-        <div class="col_flex_cont" > 
-            <a class="project-link" target="_blank" href="https://github.com/osamsam321/portfolio-personalSite/tree/main/tic%20tak%20toe">View on GitHub</a>
-            <h4 class="year_active"> Year: 2020 </h4>
-            <h4 class="status status_not_active_color"> Not Active </h4>
-        </div>
-    </div>
-
-
-      </section>
-
-      <section id="skills_modal_section"> 
-        <div  fxLayoutAlign="space-around" fxLayout="row wrap">
-      
-            <div class="modal" *ngIf ="modal_is_open" #modal >
-      
-             <container-element [ngSwitch] = "model_to_open_title">
-      
-                <div *ngSwitchCase="'java_skills_box_cont'">
-                    <div class="modal-content" #modalContent>
-                      <span class="modal-close" ></span>
-                      <div class="modal_title_cont"> 
-                        <img class="modal_title_img" src = '../../../assets/img/about-me/icons8-java-50.png'>
-                        <h2 class="modal_title">Java</h2> 
-                         <div class="hidden_title_modal_cont"> </div>  
-                      </div>
-                      <p class="model_skill_description">
-                        I have a strong proficiency in Java programming language, with several years of experience developing robust and scalable applications. I am well-versed in object-oriented principles, design patterns, and best practices. My expertise lies in developing backend systems, enterprise applications, and web services using Java frameworks like Spring and Hibernate. I am also knowledgeable in Java-based technologies such as JavaFX and Java EE. With my deep understanding of the Java ecosystem, I am able to deliver efficient and maintainable code solutions.
-      
-                      </p>
-                   </div>
-              
-                </div>
-               
-                <div *ngSwitchCase="'linux_skills_box_cont'">
-                    <div class="modal-content" #modalContent>
-                      <span class="modal-close" ></span>
-                      <div class="modal_title_cont"> 
-                        <img class="modal_title_img" src = '../../../assets/img/about-me/icons8-linux-48.png'>
-                        <h2 class="modal_title">Linux</h2> 
-                         <div class="hidden_title_modal_cont"> </div>  
-                      </div>
-                      <p class="model_skill_description">
-                        I possess a strong familiarity with Linux operating systems and command-line environments. I am comfortable working with various Linux distributions and have experience managing servers, configuring networks, and administering Linux-based systems. I am proficient in shell scripting, allowing me to automate tasks and streamline workflows. Additionally, I have knowledge of Linux server technologies such as Apache, Nginx, and MySQL, enabling me to deploy and maintain web applications effectively. With my expertise in Linux, I am able to troubleshoot issues, optimize performance, and ensure the smooth operation of Linux-based infrastructures.
-      
-                      </p>
-                   </div>
-                </div>
-      
-                <div *ngSwitchCase="'python_skills_box_cont'">
-                    <div class="modal-content" #modalContent>
-                      <span class="modal-close" ></span>
-                      <div class="modal_title_cont"> 
-                        <img class="modal_title_img" src = '../../../assets/img/about-me/icons8-python-48.png'>
-                        <h2 class="modal_title">Python</h2> 
-                         <div class="hidden_title_modal_cont"> </div>  
-                      </div>                <p class="model_skill_description">
-                        I possess a comprehensive understanding of Python programming language and its wide range of applications. I have leveraged Python's simplicity and versatility to develop various types of projects, including web applications, data analysis scripts, and automation tools. My experience with Python frameworks like Django and Flask enables me to build robust and scalable web applications efficiently. Additionally, I have utilized Python libraries such as NumPy, Pandas, and Matplotlib for data manipulation, analysis, and visualization. With my Python skills, I am able to deliver reliable and efficient solutions across different domains.
-      
-                      </p>
-                    </div>
-                </div>
-      
-                <div *ngSwitchCase="'aws_skills_box_cont'">
-                     
-                  <div class="modal-content" #modalContent>
-                    <span class="modal-close" ></span>
-                    <div class="modal_title_cont"> 
-                      <img class="modal_title_img" src = '../../../assets/img/about-me/icons8-amazon-web-services-48.png'>
-                      <h2 class="modal_title">AWS</h2> 
-                       <div class="hidden_title_modal_cont"> </div>  
-                    </div>              <p class="model_skill_description">
-                          
-                      I have a solid understanding of cloud computing concepts and extensive experience working with Amazon Web Services (AWS). I have successfully deployed and managed applications on various AWS services, including EC2, S3, Lambda, RDS, and more. I am proficient in designing and implementing scalable and highly available architectures on AWS, leveraging services like Auto Scaling, Elastic Load Balancing, and VPC. My expertise extends to cloud security, monitoring, and cost optimization techniques, ensuring efficient and secure cloud deployments.
-                    </p>
-                  </div>
-                
-                </div>
-      
-                <div *ngSwitchCase="'microsoft_skills_box_cont'">
-      
-      
-                    <div class="modal-content" #modalContent>
-                      <span class="modal-close" ></span>
-                      <div class="modal_title_cont"> 
-                        <img class="modal_title_img" src = '../../../assets/img/about-me/icons8-microsoft-48.png'>
-                        <h2 class="modal_title">Microsoft</h2> 
-                         <div class="hidden_title_modal_cont"> </div>  
-                      </div>                <p class="model_skill_description">
-      
-                        I have a proficient understanding of Microsoft technologies and frameworks, including .NET and ASP.NET. I have worked on developing and maintaining enterprise applications using Microsoft's stack, leveraging tools like Visual Studio and SQL Server. I am skilled in creating desktop applications, web applications, and APIs using C# and ASP.NET MVC. My knowledge extends to working with Microsoft Azure for cloud-based deployments, including Azure App Service, Azure SQL Database, and Azure Functions. With my expertise in Microsoft technologies, I am able to deliver reliable and scalable solutions on this platform.
-                      </p>
-                    </div>
-                </div>
-            
-      
-                <div *ngSwitchCase="'frontend_skills_box_cont'">
-                  <div class="modal-content" #modalContent>
-                    <span class="modal-close" ></span>
-                    <div class="modal_title_cont"> 
-                      <img class="modal_title_img" src = '../../../assets/img/about-me/icons8-front-end-64.png'>
-                      <h2 class="modal_title">FrontEnd</h2> 
-                       <div class="hidden_title_modal_cont"> </div>  
-                    </div>              <p class="model_skill_description">yes them</p>
-                  </div>
-      
-                </div>
-      
-                <div *ngSwitchDefault>
-      
-                  <p> nothing here</p>
-                </div>
-      
-                
-             </container-element>
-      
-             <div fxLayoutAlign = "center" style="width: 100%;"> 
-                <button id="close_modal_btn" (click) = "closeModal()"> Exit</button>
-      
-             </div>
-            </div>
-            
-       </div>  
-      
-       
-      </section>
-
-      <div id="page_dot_value_cont">
-
-        <div class="page_dot_value" #page0_dot_value id="page0_dot_value" (click)="updateCurrentPageVal(0)"> </div>
-        <div class="page_dot_value" #page1_dot_value id="page1_dot_value" (click)="updateCurrentPageVal(1)"> </div>
-        <!-- <div class="page_dot_value" #page2_dot_value id="page2_dot_value" (click)="updateCurrentPageVal(2)"> </div> -->
-      
-      </div>
-   </main> 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <main fxLayoutAlign = 'center' fxLayout = 'column' fxFlexAlign = 'center' >
-
-    <div class="project_box" fxLayoutAlign = 'center' fxFlexAlign = 'center' fxLayout = 'column'>
-        <div id="top_title_cont">
-            <h1 id="top_tile"> Title 1 </h1>
-        </div>
-        
-        <div id="project_img_cont">
-                <img src="" alt="" id="project_img">
-                
-        </div>
-
-        <div id="description_cont">
-            
-            <p>   
-                asdfagwqgqwgqwgeqwgeqg asdfagwqgqwgqwgeqwgeqg asdfagwqgqwgqwgeqwgeqg asdfagwqgqwgqwgeqwgeqg asdfagwqgqwgqwgeqwgeqg 
-            </p>
-
-        </div>
-
-        
-    </div>
-
-    <div class="project_box" fxLayoutAlign = 'center' fxFlexAlign = 'center' fxLayout = 'column'>
-        <div id="top_title_cont">
-            <h1 id="top_tile"> Title 1 </h1>
-        </div>
-        
-        <div id="project_img_cont">
-                <img src="" alt="" id="project_img">
-                
-        </div>
-
-        <div id="description_cont">
-
-            <p>   
-                asdfagwqgqwgqwgeqwgeqg asdfagwqgqwgqwgeqwgeqg asdfagwqgqwgqwgeqwgeqg asdfagwqgqwgqwgeqwgeqg asdfagwqgqwgqwgeqwgeqg 
-            </p>
-
-        </div>
-
-        
-    </div>
-
-    <div class="project_box" fxLayoutAlign = 'center' fxFlexAlign = 'center' fxLayout = 'column'>
-        <div id="top_title_cont">
-            <h1 id="top_tile"> Title 1 </h1>
-        </div>
-        
-        <div id="project_img_cont">
-                <img src="" alt="" id="project_img">
-                
-        </div>
-
-        <div id="description_cont">
-            <p>   
-                asdfagwqgqwgqwgeqwgeqg asdfagwqgqwgqwgeqwgeqg asdfagwqgqwgqwgeqwgeqg asdfagwqgqwgqwgeqwgeqg asdfagwqgqwgqwgeqwgeqg 
-            </p>
-        </div>
-
-        
-    </div>
-
-</main> -->
+  </div>
+</div>

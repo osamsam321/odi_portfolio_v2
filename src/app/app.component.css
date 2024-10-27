@@ -1,8 +1,12 @@
 body
 {
     overflow-x: hidden;
+    min-height:100%;
 }
 #parent_wrap {
+    min-height:100%;
+    height:auto;
+    display: inline-block;
     width: 100%; /* Full width */
     background-image: url('../assets/img/home_img/blue-mountain-1-tinypng_optimization.jpg');
     background-size: cover; /* Ensures the image covers the entire element */
