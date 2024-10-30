@@ -7,10 +7,14 @@
      </div>  -->
 
     <nav class="nav-container">
-      <a id="home" class="primary-default-color" tabindex="-1" #nav_home_link [routerLink]="['/home']"  > Home </a>
-      <a id="about_me" class="primary-default-color" tabindex="-1" #nav_about_me_link [routerLink]="['/about_me']"  > About Me</a>
-      <a id="projects" class="primary-default-color" tabindex="-1" #nav_projects_link [routerLink]="['/projects']"  > Projects </a>
-      <a id="misc" class="primary-default-color "tabindex="-1" #nav_misc_link [routerLink]="['/misc']"  > Contact </a>
+      <a id="home" class="primary-default-color" tabindex="-1" #nav_home_link [routerLink]="['/home']" [ngClass]="{'active': activeLink === 'home'}"
+      (click)="setActive('home')" > Home </a>
+      <a id="about_me" class="primary-default-color" tabindex="-1" #nav_about_me_link [routerLink]="['/about_me']"  [ngClass]="{'active': activeLink === 'about_me'}"
+      (click)="setActive('about_me')"> About Me</a>
+      <a id="projects" class="primary-default-color" tabindex="-1" #nav_projects_link [routerLink]="['/projects']" [ngClass]="{'active': activeLink === 'projects'}"
+      (click)="setActive('projects')" > Projects </a>
+      <a id="misc" class="primary-default-color "tabindex="-1" #nav_misc_link [routerLink]="['/misc']" [ngClass]="{'active': activeLink === 'misc'}"
+      (click)="setActive('misc')" > Contact </a>
     </nav>
 
 

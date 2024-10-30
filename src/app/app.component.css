@@ -4,15 +4,42 @@ body
     min-height:100%;
 }
 #parent_wrap {
-    min-height:100%;
-    height:auto;
-    display: inline-block;
-    width: 100%; /* Full width */
-    background-image: url('../assets/img/home_img/blue-mountain-1-tinypng_optimization.jpg');
-    background-size: cover; /* Ensures the image covers the entire element */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-color: rgba(0, 0, 0, 0.2); /* Optional: overlay effect */
+      background-image:
+        linear-gradient(
+          rgba(0, 0, 0, .45),
+          rgba(0, 0, 0, .45)),
+          url('/assets/img/home_img/dark_main_background_3.jpg');
+    background-repeat: repeat-x, repeat-y; /* specify repeat behavior for each layer */
+    background-blend-mode: overlay; /* Blend the overlay with the background image */
+
 }
+
+
+/* If the browser supports WebP but not AVIF */
+@supports (background-image: url('/assets/img/home_img/dark_main_background_3.webp')) {
+    #parent_wrap {
+      background-image:
+        linear-gradient(
+          rgba(0, 0, 0, .45),
+          rgba(0, 0, 0, .45)),
+          url('/assets/img/home_img/dark_main_background_3.webp');
+    }
+}
+/* If the browser supports AVIF */
+@supports (background-image: url('/assets/img/home_img/dark_main_background_3.avif')) {
+    #parent_wrap {
+        background-image: url('/assets/img/home_img/dark_main_background_3.avif');
+    }
+    #parent_wrap {
+      background-image:
+        linear-gradient(
+          rgba(0, 0, 0, .20),
+          rgba(0, 0, 0, .20)),
+          url('/assets/img/home_img/dark_main_background_3.avif');
+    }
+}
+
+
 
 /* #parent_wrap{
     background-color: black;
@@ -27,15 +54,38 @@ body
   width:100%;
   z-index:-1;
 }
-@media only screen and (max-height: 800px) {
+@media only screen and (max-height: 800px) and (min-width: 400px) {
   #parent_wrap{
+    background-size: cover ;
   }
-  /*.social_media_wrapper{
-    margin-bottom: 70px;
-    margin-top: 50px;
-  }
-  main{
-    height: 150vh;
-  } */
-
 }
+
+@media only screen and (max-width: 599px) {
+  #parent_wrap{
+    background-size: 400px 200vh ;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 899px) {
+  #parent_wrap{
+    background-size: 700px 130vh ;
+  }
+}
+@media only screen and (min-width: 900px) and (max-width: 1199px) {
+  #parent_wrap{
+    background-size: 800px 200vh ;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1799px) {
+  #parent_wrap{
+      background-size: contain ;
+    }
+}
+
+@media only screen and (min-width: 1800px) {
+  #parent_wrap{
+    background-size: contain ;
+  }
+}
+

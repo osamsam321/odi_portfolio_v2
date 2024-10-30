@@ -16,6 +16,11 @@ img{
   margin-top: 4%;
   margin-left:1.9%;
 }
+.project_description{
+    font-stretch: ultra-expanded;
+    letter-spacing: .025vw;
+    color: #eaeaea;
+}
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -89,7 +94,7 @@ img{
 .project_box_footer_container{
   justify-content: left;
   margin-top: 5%;
-  margin-bottom: 1%;
+  margin-bottom: 1.2%;
 }
 .project_box_tech_used_container{
   justify-content:left;
@@ -126,13 +131,20 @@ img{
   }
   .project_box_root_container{
     width: 350px;
-    margin-top:25px;
+    margin-top:55px;
     border-radius: 8px;
 
   }
+  .project_box_footer_container{
+    margin-bottom: 1.6%;
+  }
   .project_description{
-    font-size: 11px;
+    font-size: 12.5px;
     line-height: 1.5;
+
+  }
+  .project_box_tech_used_container{
+    margin-left: 25%;
   }
   .tech_used_box{
     margin-left: 1.6%;
@@ -140,23 +152,23 @@ img{
     border-radius: 2.0px;
   }
   .tech_used_font{
-    font-size: 8px;
+    font-size: 9px;
   }
   #page_title{
     font-size: 23px;
   }
   .icon{
-    height: 16px;
-    width: 16px;
+    height: 17px;
+    width: 17px;
   }
   h2{
-    font-size:13px;
+    font-size:14.5px;
   }
   h3{
     font-size:12px;
   }
   h4{
-    font-size:11px;
+    font-size:10px;
   }
 }
 
@@ -168,12 +180,12 @@ img{
   }
   .project_box_root_container{
     width: 500px;
-    margin-top:30px;
+    margin-top:40px;
     border-radius: 10px;
 
   }
   .project_description{
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.6;
   }
   .tech_used_box{
@@ -181,7 +193,7 @@ img{
     border-radius: 2.3px;
   }
   .tech_used_font{
-    font-size: 9px;
+    font-size: 10px;
   }
   #page_title{
     font-size: 25px;
@@ -307,7 +319,7 @@ img{
     font-size: 11px;
   }
   #page_title{
-    font-size: 34px;
+    font-size: 36px;
   }
   .icon{
     height: 25px;

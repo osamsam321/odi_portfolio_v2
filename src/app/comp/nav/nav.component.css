@@ -19,10 +19,12 @@ h3, a{
     text-decoration: none;
 }
 a:focus{
-  color: #fe1110;
   text-decoration: none;
   border: none;
   outline: none;
+}
+a.active{
+  color:red
 }
 .primary-default-color{
   color: rgb(250,250,250);

@@ -47,7 +47,12 @@ a {
   color: #f39c12;
   text-decoration: none;
 }
-
+#root{
+  width: 100%;
+}
+#dunbar_work_experience_section{
+background:  transparent;
+}
 a:hover {
   text-decoration: underline;
 }
@@ -65,7 +70,7 @@ a:hover {
   color:#fa3322;
 }
 .highlight_text_secondary{
-  color:#ffdd11;
+  color:#22bbcc;
 }
 .white_font{
   color:white;
@@ -120,7 +125,6 @@ a:hover {
     position: static;
   }
   .reader_background{
-    background-color: #1111111a;
     z-index: 99999;
     border-radius: 15px;
   }

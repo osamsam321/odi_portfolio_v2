@@ -17,23 +17,14 @@ export class NavComponent implements OnInit, AfterViewInit	 {
 
 
   links = ["home", "about_me", "projects",  'misc'];
-  linkIndex = 0;
-  isFocused = false;
-  currentUrl: any;
   route!:string;
-  @ViewChild('nav_home_link', { static: false }) nav_home_link_er!: ElementRef;
-  @ViewChild('nav_projects_link', { static: false }) nav_projects_link_er!: ElementRef;
-  @ViewChild('nav_about_me_link', { static: false }) nav_about_me_link_er!: ElementRef;
-  @ViewChild('nav_misc_link', { static: false }) nav_misc_link_er!: ElementRef;
+  activeLink: string = 'home';
   nav_link_index_selected:any;
-  links_er!:ElementRef[];
 
   constructor(private r2: Renderer2, private el: ElementRef, private router: Router,
     private activated_route: ActivatedRoute, private location: Location) {}
   ngAfterViewInit(): void {
     this.prepare_nav();
-    this.links_er = [this.nav_home_link_er, this.nav_about_me_link_er, this.nav_projects_link_er,
-    this.nav_misc_link_er];
   }
   ngOnInit(): void {
     this.router.navigate([this.links[0]]);
@@ -47,6 +38,10 @@ export class NavComponent implements OnInit, AfterViewInit	 {
         this.route = '/'
       }
     });
+  }
+  // Method to set the active link
+  setActive(link: string) {
+    this.activeLink = link;
   }
 
 

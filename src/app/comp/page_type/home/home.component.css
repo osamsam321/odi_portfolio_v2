@@ -11,7 +11,26 @@ main
   from { opacity: 0; }
   to { opacity: 1; }
 }
-
+main{
+    min-height: 100%;
+    height: auto;
+    display: inline-block;
+    width: 100%; /* Full width */
+   /* background-image: url('/assets/img/home_img/colorful_mountain_1.jpg');
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-color: rgba(0, 0, 0, 0.5);  */
+}
+/*@supports (background-image: url('/assets/img/home_img/colorful_mountain_1.webp')) {
+    main {
+        background-image: url('/assets/img/home_img/colorful_mountain_1.webp');
+    }
+}
+@supports (background-image: url('/assets/img/home_img/colorful_mountain_1.avif')) {
+    main {
+        background-image: url('/assets/img/home_img/colorful_mountain_1.avif');
+    }
+} */
 p{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -210,6 +229,9 @@ h1, h2, p, h3{
 
 /* Small devices (phones, 0px to 599px) */
 @media only screen and (max-width: 599px) {
+    main{
+      background-size: 599px 800px;
+    }
     .main_title{
       margin-top:58%;
     }
@@ -250,6 +272,9 @@ h1, h2, p, h3{
 
 /* Medium devices (small tablets, 600px to 899px) */
 @media only screen and (min-width: 600px) and (max-width: 899px) {
+    main{
+      background-size: 899px 1200px;
+    }
     .main_title{
       margin-top:40%;
     }
@@ -287,6 +312,9 @@ h1, h2, p, h3{
 
 /* Large devices (tablets, 900px to 1199px) */
 @media only screen and (min-width: 900px) and (max-width: 1199px) {
+    main{
+      background-size: 1199px 1400px;
+    }
     .main_title{
       margin-top:26%;
     }

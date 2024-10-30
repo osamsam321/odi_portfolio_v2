@@ -4,6 +4,7 @@ body {
     overflow-y: scroll;
     margin: 0px;
     height:100vh;
+    background-color: black;
 
     /* Firefox scrollbar styles */
 }
