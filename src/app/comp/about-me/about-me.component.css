@@ -31,11 +31,9 @@ h3{
 }
 p {
   margin-bottom: 50px;
-  line-height: 1.6;
   font-family: "Poppins";
   letter-spacing: 1px;
   font-size: 18px;
-  line-height: 50px;
   font-family: "Poppins";
   letter-spacing: 1px;
   color: #fafafa;
@@ -118,7 +116,7 @@ a:hover {
     margin-bottom: 15px;
     margin-top: 50px;
     border-radius: 20px;
-    line-height: 50px;
+    line-height: 40px;
     font-family: "Poppins";
     letter-spacing: 1px;
     color: rgb(240, 240, 240);
@@ -241,6 +239,7 @@ a:hover {
   }
   .section-description{
     margin-top: 40px;
+    line-height: 28px;
   }
 }
 
@@ -280,6 +279,7 @@ a:hover {
   }
   .section-description{
     margin-top: 50px;
+    line-height: 31px;
   }
 }
 
@@ -319,6 +319,7 @@ a:hover {
   }
   .section-description{
     margin-top: 60px;
+    line-height: 34px;
   }
 }
 
@@ -358,6 +359,7 @@ a:hover {
   }
   .section-description{
     margin-top: 70px;
+    line-height: 37px;
   }
 }
 
@@ -397,5 +399,6 @@ a:hover {
   }
   .section-description{
     margin-top: 80px;
+    line-height: 40px;
   }
 }

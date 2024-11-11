@@ -1,7 +1,7 @@
 
 .main_content_container {
     width: 100%;
-    min-height: 100%;
+    min-height: 100vh;
     margin: 0px;
     display: flex;
     justify-content: top;

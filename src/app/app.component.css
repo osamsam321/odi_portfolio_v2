@@ -5,40 +5,37 @@ body
 }
 #parent_wrap {
       background-image:
-        linear-gradient(
-          rgba(0, 0, 0, .45),
-          rgba(0, 0, 0, .45)),
-          url('/assets/img/home_img/dark_main_background_3.jpg');
-    background-repeat: repeat-x, repeat-y; /* specify repeat behavior for each layer */
-    background-blend-mode: overlay; /* Blend the overlay with the background image */
+          url('/assets/img/home_img/dark_main_background_4.jpg');
+      background-repeat: no-repeat;
+      height: inherit;
+      z-index: -1;
 
 }
 
 
 /* If the browser supports WebP but not AVIF */
-@supports (background-image: url('/assets/img/home_img/dark_main_background_3.webp')) {
+@supports (background-image: url('/assets/img/home_img/dark_main_background_4.webp')) {
     #parent_wrap {
       background-image:
         linear-gradient(
-          rgba(0, 0, 0, .45),
-          rgba(0, 0, 0, .45)),
-          url('/assets/img/home_img/dark_main_background_3.webp');
+          rgba(0, 0, 0, .53),
+          rgba(0, 0, 0, .53)),
+          url('/assets/img/home_img/dark_main_background_4.webp');
     }
 }
 /* If the browser supports AVIF */
-@supports (background-image: url('/assets/img/home_img/dark_main_background_3.avif')) {
+@supports (background-image: url('/assets/img/home_img/dark_main_background_4.avif')) {
     #parent_wrap {
-        background-image: url('/assets/img/home_img/dark_main_background_3.avif');
+        background-image: url('/assets/img/home_img/dark_main_background_4.avif');
     }
     #parent_wrap {
       background-image:
         linear-gradient(
-          rgba(0, 0, 0, .20),
-          rgba(0, 0, 0, .20)),
-          url('/assets/img/home_img/dark_main_background_3.avif');
+          rgba(0, 0, 0, .50),
+          rgba(0, 0, 0, .50)),
+          url('/assets/img/home_img/dark_main_background_4.avif');
     }
 }
-
 
 
 /* #parent_wrap{
@@ -56,36 +53,77 @@ body
 }
 @media only screen and (max-height: 800px) and (min-width: 400px) {
   #parent_wrap{
-    background-size: cover ;
+    background-repeat: repeat-y; /* specify repeat behavior for each layer */
+    background-size: 150vw 300vh;
+    background-position:-10vw 0vh;
   }
 }
 
 @media only screen and (max-width: 599px) {
   #parent_wrap{
-    background-size: 400px 200vh ;
+    background-size: 150vw 200vh;
+    background-repeat:  repeat-y; /* specify repeat behavior for each layer */
+    background-position:-10vw -20vh;
   }
+
+#parent_wrap {
+      background-image:
+        linear-gradient(
+          rgba(0, 0, 0, .47),
+          rgba(0, 0, 0, .47)),
+          url('/assets/img/home_img/dark_main_background_4.jpg');
+    background-blend-mode: overlay; /* Blend the overlay with the background image */
+
 }
 
-@media only screen and (min-width: 600px) and (max-width: 899px) {
+
+  /* If the browser supports WebP but not AVIF */
+  @supports (background-image: url('/assets/img/home_img/dark_main_background_4.webp')) {
+      #parent_wrap {
+        background-image:
+          linear-gradient(
+            rgba(0, 0, 0, .47),
+            rgba(0, 0, 0, .47)),
+            url('/assets/img/home_img/dark_main_background_4.webp');
+      }
+  }
+  /* If the browser supports AVIF */
+  @supports (background-image: url('/assets/img/home_img/dark_main_background_4.avif')) {
+      #parent_wrap {
+          background-image: url('/assets/img/home_img/dark_main_background_4.avif');
+      }
+      #parent_wrap {
+        background-image:
+          linear-gradient(
+            rgba(0, 0, 0, .47),
+            rgba(0, 0, 0, .47)),
+            url('/assets/img/home_img/dark_main_background_4.avif');
+      }
+  }
+
+}
+
+@media only screen and (min-width: 600px) and (max-width: 899px){
   #parent_wrap{
-    background-size: 700px 130vh ;
+    background-size: 900px 250vh ;
   }
 }
 @media only screen and (min-width: 900px) and (max-width: 1199px) {
   #parent_wrap{
-    background-size: 800px 200vh ;
+    background-size: 1100px 230vh ;
   }
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1799px) {
   #parent_wrap{
-      background-size: contain ;
+      background-size: 115vw 175vh;
     }
 }
 
 @media only screen and (min-width: 1800px) {
   #parent_wrap{
-    background-size: contain ;
+    background-position:-20vw 0vh;
+    background-size: 115vw 175vh;
   }
 }
 
