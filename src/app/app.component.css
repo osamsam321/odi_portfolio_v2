@@ -11,8 +11,6 @@ body
       z-index: -1;
 
 }
-
-
 /* If the browser supports WebP but not AVIF */
 @supports (background-image: url('/assets/img/home_img/dark_main_background_4.webp')) {
     #parent_wrap {
@@ -36,16 +34,6 @@ body
           url('/assets/img/home_img/dark_main_background_4.avif');
     }
 }
-
-
-/* #parent_wrap{
-    background-color: black;
-    background-image: url('../assets/img/home_img/blue-mountain-1-tinypng_optimization.jpg');
-    background-size:cover;
-    height:100vh;
-    background-repeat: no-repeat;
-    background-color: rgba(0, 0, 0, 0.2);
-} */
 #nav_wrapper{
   height:100px;
   width:100%;
@@ -106,24 +94,37 @@ body
 @media only screen and (min-width: 600px) and (max-width: 899px){
   #parent_wrap{
     background-size: 900px 250vh ;
+    background-repeat: repeat-y; /* specify repeat behavior for each layer */
   }
 }
 @media only screen and (min-width: 900px) and (max-width: 1199px) {
   #parent_wrap{
-    background-size: 1100px 230vh ;
+    background-position:-30vw 5vh;
+    background-size: 150vw 150vh;
+    background-repeat: repeat-y; /* specify repeat behavior for each layer */
   }
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1799px) {
   #parent_wrap{
-      background-size: 115vw 175vh;
+      background-position:-5vw 5.5vh;
+      background-size: 135vw 162vh;
+      background-repeat: repeat-y; /* specify repeat behavior for each layer */
     }
 }
 
-@media only screen and (min-width: 1800px) {
+@media only screen and (min-width: 1800px) and (max-width: 2249px) {
   #parent_wrap{
-    background-position:-20vw 0vh;
-    background-size: 115vw 175vh;
+    background-position:-10vw -5vh;
+    background-size: 135vw 165vh;
+    background-repeat: repeat-y; /* specify repeat behavior for each layer */
   }
 }
 
+@media only screen and (min-width: 2250px) {
+  #parent_wrap{
+    background-position:-20vw -5vh;
+    background-size: 135vw 165vh;
+    background-repeat: repeat-y; /* specify repeat behavior for each layer */
+  }
+}
