@@ -46,7 +46,9 @@ const routes: Routes = [
     AppRoutingModule,
     FlexLayoutModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes, {
+      scrollPositionRestoration: 'enabled' //automatically scrolls to the top
+    })
   ],
 
   providers: [],

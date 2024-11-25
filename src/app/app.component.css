@@ -93,7 +93,8 @@ body
 
 @media only screen and (min-width: 600px) and (max-width: 899px){
   #parent_wrap{
-    background-size: 900px 250vh ;
+    background-position:-35vw 5vh;
+    background-size: 150vw 150vh;
     background-repeat: repeat-y; /* specify repeat behavior for each layer */
   }
 }
